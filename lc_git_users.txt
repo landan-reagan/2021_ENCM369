@@ -6,3 +6,4 @@ John,Trainor,john.trainor@ucalgary.ca,jd-trainor,2021_ENCM369
 Jaiteg,Sidhu,Jaiteg.sidhu@ucalgary.ca,JaitegSinghSidhu,2021_ENCM369
 Aliaa,Elmurshedy,aliaa.elmurshedy@ucalgary.ca,2021_ENCM369
 Anhela,Francees,anhela.francees@ucalgary.ca,anhela-francees,2021_ENCM369
+tanvir,haer,tanvir.haer@ucalgary.ca,tanvirhaer,2021_ENCM369
