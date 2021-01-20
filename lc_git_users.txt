@@ -3,3 +3,4 @@ course,instructor,jrlong@ucalgary.ca,UofCencm369,2021_ENCM369
 landan,reagan,landan.reagan@ucalgary.ca,landan-reagan,2021_ENCM369
 Caleb,Jacobs,caleb.jacobs@ucalgary.ca,blayfort,2021_ENCM369
 John,Trainor,john.trainor@ucalgary.ca,jd-trainor,2021_ENCM369
+Jaiteg,Sidhu,Jaiteg.sidhu@ucalgary.ca,JaitegSinghSidhu,2021_ENCM369
