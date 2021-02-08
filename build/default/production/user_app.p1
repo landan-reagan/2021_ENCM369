@@ -1,4 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"46095 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 46095: extern volatile unsigned char PORTA __attribute__((address(0x4CE)));
+[v _PORTA `Vuc ~T0 @X0 0 e@1230 ]
 "30 ./configuration.h
 [p x FEXTOSC  =  OFF     ]
 "31
@@ -2543,7 +2546,49 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _UserAppRun ]
 [f ]
+"97
+[; ;user_app.c: 97:     if (PORTA <= 0xBF) {
+[e $ ! <= -> _PORTA `i -> 191 `i 2274  ]
+{
+"98
+[; ;user_app.c: 98:         PORTA += 1;
+[e =+ _PORTA -> -> 1 `i `Vuc ]
 "99
-[; ;user_app.c: 99: }
+[; ;user_app.c: 99:     }
+}
+[e $U 2275  ]
+"100
+[; ;user_app.c: 100:     else {
+[e :U 2274 ]
+{
+"101
+[; ;user_app.c: 101:         PORTA = 0x80;
+[e = _PORTA -> -> 128 `i `uc ]
+"102
+[; ;user_app.c: 102:     }
+}
+[e :U 2275 ]
+"104
+[; ;user_app.c: 104:     u32 u32Counter = 0;
+[v _u32Counter `ul ~T0 @X0 1 a ]
+[e = _u32Counter -> -> -> 0 `i `l `ul ]
+"106
+[; ;user_app.c: 106:     while(u32Counter < 200000){
+[e $U 2276  ]
+[e :U 2277 ]
+{
+"107
+[; ;user_app.c: 107:         u32Counter ++;
+[e ++ _u32Counter -> -> -> 1 `i `l `ul ]
+"108
+[; ;user_app.c: 108:     }
+}
+[e :U 2276 ]
+"106
+[; ;user_app.c: 106:     while(u32Counter < 200000){
+[e $ < _u32Counter -> -> 200000 `l `ul 2277  ]
+[e :U 2278 ]
+"110
+[; ;user_app.c: 110: }
 [e :UE 2273 ]
 }
