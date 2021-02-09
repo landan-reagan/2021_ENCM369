@@ -94,7 +94,21 @@ Promises:
 */
 void UserAppRun(void)
 {
-
+    if (PORTA <= 0xBF) /* Check if counter is less than maximum value */
+    {
+        PORTA += 1; /* Binary increment counter */
+    }
+    else /* Excecutes if counter is greater than maximum value */
+    {
+        PORTA = 0x80; /* Reset all ports to 0 except pin 7 */
+    }
+    
+    u32 u32Counter = 0;
+    
+    while(u32Counter < 200000)
+    {
+        u32Counter ++;
+    } /* End of while loop delay */
 
 } /* end UserAppRun */
 
