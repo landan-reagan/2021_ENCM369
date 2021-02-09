@@ -1,7 +1,19 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"46095 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
+"45840 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 45840: extern volatile unsigned char TRISA __attribute__((address(0x4C6)));
+[v _TRISA `Vuc ~T0 @X0 0 e@1222 ]
+"46095
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 46095: extern volatile unsigned char PORTA __attribute__((address(0x4CE)));
 [v _PORTA `Vuc ~T0 @X0 0 e@1230 ]
+"37918
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 37918: extern volatile unsigned char ANSELA __attribute__((address(0x400)));
+[v _ANSELA `Vuc ~T0 @X0 0 e@1024 ]
+"37 encm369_pic18.c
+[; ;encm369_pic18.c: 37: extern volatile u32 G_u32SystemTime1ms;
+[v _G_u32SystemTime1ms `Vul ~T0 @X0 0 e ]
+"38
+[; ;encm369_pic18.c: 38: extern volatile u32 G_u32SystemTime1s;
+[v _G_u32SystemTime1s `Vul ~T0 @X0 0 e ]
 "30 ./configuration.h
 [p x FEXTOSC  =  OFF     ]
 "31
@@ -2523,78 +2535,66 @@ Version 4.0 HI-TECH Software Intermediate Code
 "47642
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 47642: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"33 user_app.c
-[; ;user_app.c: 33: volatile u8 G_u8UserAppFlags;
-[v _G_u8UserAppFlags `Vuc ~T0 @X0 1 e ]
-"76
-[; ;user_app.c: 76: void UserAppInitialize(void)
-[v _UserAppInitialize `(v ~T0 @X0 1 ef ]
-"77
-[; ;user_app.c: 77: {
+"70 encm369_pic18.c
+[; ;encm369_pic18.c: 70: void ClockSetup(void)
+[v _ClockSetup `(v ~T0 @X0 1 ef ]
+"71
+[; ;encm369_pic18.c: 71: {
 {
-[e :U _UserAppInitialize ]
+[e :U _ClockSetup ]
 [f ]
-"80
-[; ;user_app.c: 80: }
+"74
+[; ;encm369_pic18.c: 74: }
 [e :UE 2272 ]
 }
-"95
-[; ;user_app.c: 95: void UserAppRun(void)
-[v _UserAppRun `(v ~T0 @X0 1 ef ]
-"96
-[; ;user_app.c: 96: {
+"89
+[; ;encm369_pic18.c: 89: void GpioSetup(void)
+[v _GpioSetup `(v ~T0 @X0 1 ef ]
+"90
+[; ;encm369_pic18.c: 90: {
 {
-[e :U _UserAppRun ]
+[e :U _GpioSetup ]
 [f ]
-"97
-[; ;user_app.c: 97:     if (PORTA <= 0xBF)
-[e $ ! <= -> _PORTA `i -> 191 `i 2274  ]
-"98
-[; ;user_app.c: 98:     {
-{
-"99
-[; ;user_app.c: 99:         PORTA += 1;
-[e =+ _PORTA -> -> 1 `i `Vuc ]
-"100
-[; ;user_app.c: 100:     }
-}
-[e $U 2275  ]
-"101
-[; ;user_app.c: 101:     else
-[e :U 2274 ]
-"102
-[; ;user_app.c: 102:     {
-{
-"103
-[; ;user_app.c: 103:         PORTA = 0x80;
+"91
+[; ;encm369_pic18.c: 91:     TRISA = 0x00;
+[e = _TRISA -> -> 0 `i `uc ]
+"92
+[; ;encm369_pic18.c: 92:     PORTA = 0x80;
 [e = _PORTA -> -> 128 `i `uc ]
-"104
-[; ;user_app.c: 104:     }
-}
-[e :U 2275 ]
-"106
-[; ;user_app.c: 106:     u32 u32Counter = 0;
-[v _u32Counter `ul ~T0 @X0 1 a ]
-[e = _u32Counter -> -> -> 0 `i `l `ul ]
-"108
-[; ;user_app.c: 108:     while(u32Counter < 200000)
-[e $U 2276  ]
-[e :U 2277 ]
-"109
-[; ;user_app.c: 109:     {
-{
-"110
-[; ;user_app.c: 110:         u32Counter ++;
-[e ++ _u32Counter -> -> -> 1 `i `l `ul ]
-"111
-[; ;user_app.c: 111:     }
-}
-[e :U 2276 ]
-"108
-[; ;user_app.c: 108:     while(u32Counter < 200000)
-[e $ < _u32Counter -> -> 200000 `l `ul 2277  ]
-[e :U 2278 ]
-"113
-[; ;user_app.c: 113: }
+"93
+[; ;encm369_pic18.c: 93:     ANSELA = 0x00;
+[e = _ANSELA -> -> 0 `i `uc ]
+"95
+[; ;encm369_pic18.c: 95: }
 [e :UE 2273 ]
+}
+"110
+[; ;encm369_pic18.c: 110: void SysTickSetup(void)
+[v _SysTickSetup `(v ~T0 @X0 1 ef ]
+"111
+[; ;encm369_pic18.c: 111: {
+{
+[e :U _SysTickSetup ]
+[f ]
+"112
+[; ;encm369_pic18.c: 112:   G_u32SystemTime1ms = 0;
+[e = _G_u32SystemTime1ms -> -> -> 0 `i `l `ul ]
+"113
+[; ;encm369_pic18.c: 113:   G_u32SystemTime1s = 0;
+[e = _G_u32SystemTime1s -> -> -> 0 `i `l `ul ]
+"115
+[; ;encm369_pic18.c: 115: }
+[e :UE 2274 ]
+}
+"132
+[; ;encm369_pic18.c: 132: void SystemSleep(void)
+[v _SystemSleep `(v ~T0 @X0 1 ef ]
+"133
+[; ;encm369_pic18.c: 133: {
+{
+[e :U _SystemSleep ]
+[f ]
+"135
+[; ;encm369_pic18.c: 135: }
+[e :UE 2275 ]
 }

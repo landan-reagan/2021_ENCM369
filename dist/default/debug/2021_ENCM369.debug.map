@@ -3,12 +3,12 @@ Microchip MPLAB XC8 Compiler V2.31
 Linker command line:
 
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2_31\pic\dat\en_msgs.txt -cn \
-  -h+dist/default/production\2021_ENCM369.production.sym \
-  --cmf=dist/default/production\2021_ENCM369.production.cmf -z -Q18F27Q43 \
-  -oC:\Users\aliaa\AppData\Local\Temp\sqlo.2 --defsym=__MPLAB_BUILD=1 \
-  -Mdist/default/production/2021_ENCM369.production.map -E1 \
-  -ver=XC8 Compiler --acfsm=1493 -ASTACK=0560h-025FFh -pstack=STACK \
-  -ACODE=00h-01FFFFh -ACONST=00h-01FFFFh -ASMALLCONST=02600h-026FFhx474 \
+  -h+dist/default/debug\2021_ENCM369.debug.sym \
+  --cmf=dist/default/debug\2021_ENCM369.debug.cmf -z -Q18F27Q43 \
+  -oC:\Users\aliaa\AppData\Local\Temp\snmc.2 --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/debug/2021_ENCM369.debug.map -E1 -ver=XC8 Compiler \
+  --acfsm=1493 -ASTACK=0560h-025FFh -pstack=STACK -ACODE=00h-01FFFFh \
+  -ACONST=00h-01FFFFh -ASMALLCONST=02600h-026FFhx474 \
   -AMEDIUMCONST=02600h-0FFFFh,012600h-01FFFFh -ACOMRAM=0501h-055Fh \
   -AABS1=0500h-025FFh -ABIGRAM=0501h-025FFh \
   -ARAM=0560h-05FFh,0600h-06FFhx32 -ABANK5=0560h-05FFh -ABANK6=0600h-06FFh \
@@ -31,8 +31,8 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\aliaa\AppData\Local\Temp\sqlo.o \
-  dist/default/production\2021_ENCM369.production.o 
+  C:\Users\aliaa\AppData\Local\Temp\snmc.o \
+  dist/default/debug\2021_ENCM369.debug.o 
 
 Object code version is 3.11
 
@@ -41,12 +41,12 @@ Machine type is 18F27Q43
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\aliaa\AppData\Local\Temp\sqlo.o
+C:\Users\aliaa\AppData\Local\Temp\snmc.o
                 idloc                            200000   200000       20        0       5
                 config                           300000   300000        A        0       4
                 init                              1FFFC    1FFFC        4     FFFE       0
                 reset_vec                             0        0        4        0       0
-dist/default/production\2021_ENCM369.production.o
+dist/default/debug\2021_ENCM369.debug.o
                 idloc                            200000   200000       20        0       5
                 config                           300000   300000        A        0       4
                 text6                             1FF36    1FF36        2     FF9B       0

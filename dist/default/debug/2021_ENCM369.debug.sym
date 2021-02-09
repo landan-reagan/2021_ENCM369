@@ -250,9 +250,9 @@ text2 1FF3A 1FF3B CODE 1FF3A 0
 text3 1FF38 1FF39 CODE 1FF38 0
 text6 1FF36 1FF37 CODE 1FF36 0
 %locals
-dist/default/production\2021_ENCM369.production.o
+dist/default/debug\2021_ENCM369.debug.o
 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
-C:\Users\aliaa\AppData\Local\Temp\sqlo.s
+C:\Users\aliaa\AppData\Local\Temp\snmc.s
 5081 1FF4C 0 CODE 0
 5083 1FF4C 0 CODE 0
 5086 1FF4C 0 CODE 0
