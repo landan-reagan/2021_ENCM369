@@ -23,7 +23,7 @@ text5 CODE 0 1FF6A 1FF6A 20 1
 text6 CODE 0 1FF52 1FF52 2 1
 bssCOMRAM COMRAM 1 501 501 D 1
 config CONFIG 4 300000 300000 A 1
-$C:\Users\landa\AppData\Local\Temp\sfk8.o
+$C:\Users\landa\AppData\Local\Temp\sam8.o
 idloc IDLOC 5 200000 200000 20 1
 init CODE 0 1FFFC 1FFFC 4 1
 reset_vec CODE 0 0 0 4 1
@@ -127,18 +127,18 @@ $dist/default/production\2021_ENCM369.production.o
 1FFBA text0 CODE >47:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
 1FFBE text0 CODE >57:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
 1FFC2 text0 CODE >62:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
-1FF58 cinit CODE >5089:C:\Users\landa\AppData\Local\Temp\sfk8.s
-1FF58 cinit CODE >5091:C:\Users\landa\AppData\Local\Temp\sfk8.s
-1FF58 cinit CODE >5094:C:\Users\landa\AppData\Local\Temp\sfk8.s
-1FF58 cinit CODE >5116:C:\Users\landa\AppData\Local\Temp\sfk8.s
-1FF5C cinit CODE >5117:C:\Users\landa\AppData\Local\Temp\sfk8.s
-1FF5E cinit CODE >5118:C:\Users\landa\AppData\Local\Temp\sfk8.s
-1FF5E cinit CODE >5119:C:\Users\landa\AppData\Local\Temp\sfk8.s
-1FF60 cinit CODE >5120:C:\Users\landa\AppData\Local\Temp\sfk8.s
-1FF62 cinit CODE >5121:C:\Users\landa\AppData\Local\Temp\sfk8.s
-1FF64 cinit CODE >5127:C:\Users\landa\AppData\Local\Temp\sfk8.s
-1FF64 cinit CODE >5129:C:\Users\landa\AppData\Local\Temp\sfk8.s
-1FF66 cinit CODE >5130:C:\Users\landa\AppData\Local\Temp\sfk8.s
+1FF58 cinit CODE >5089:C:\Users\landa\AppData\Local\Temp\sam8.s
+1FF58 cinit CODE >5091:C:\Users\landa\AppData\Local\Temp\sam8.s
+1FF58 cinit CODE >5094:C:\Users\landa\AppData\Local\Temp\sam8.s
+1FF58 cinit CODE >5116:C:\Users\landa\AppData\Local\Temp\sam8.s
+1FF5C cinit CODE >5117:C:\Users\landa\AppData\Local\Temp\sam8.s
+1FF5E cinit CODE >5118:C:\Users\landa\AppData\Local\Temp\sam8.s
+1FF5E cinit CODE >5119:C:\Users\landa\AppData\Local\Temp\sam8.s
+1FF60 cinit CODE >5120:C:\Users\landa\AppData\Local\Temp\sam8.s
+1FF62 cinit CODE >5121:C:\Users\landa\AppData\Local\Temp\sam8.s
+1FF64 cinit CODE >5127:C:\Users\landa\AppData\Local\Temp\sam8.s
+1FF64 cinit CODE >5129:C:\Users\landa\AppData\Local\Temp\sam8.s
+1FF66 cinit CODE >5130:C:\Users\landa\AppData\Local\Temp\sam8.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -157,23 +157,23 @@ __Hspace_1 50E 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\2021_ENCM369.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\landa\AppData\Local\Temp\sfk8.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\landa\AppData\Local\Temp\sam8.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\2021_ENCM369.production.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\2021_ENCM369.production.o
 _LATA 4BE 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 _LATB 4BF 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
-___sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sfk8.o
+___sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sam8.o
 _main 1FFAC 0 CODE 0 text0 dist/default/production\2021_ENCM369.production.o
-start 1FFFC 0 CODE 0 init C:\Users\landa\AppData\Local\Temp\sfk8.o
+start 1FFFC 0 CODE 0 init C:\Users\landa\AppData\Local\Temp\sam8.o
 __size_of_main 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\2021_ENCM369.production.o
 __size_of_SystemSleep 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\2021_ENCM369.production.o
-__accesstop 560 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sfk8.o
-intlevel0 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sfk8.o
-intlevel1 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sfk8.o
-intlevel2 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sfk8.o
-intlevel3 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sfk8.o
+__accesstop 560 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sam8.o
+intlevel0 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sam8.o
+intlevel1 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sam8.o
+intlevel2 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sam8.o
+intlevel3 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sam8.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\2021_ENCM369.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\2021_ENCM369.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\2021_ENCM369.production.o
@@ -182,8 +182,8 @@ _UserAppRun 1FFCE 0 CODE 0 text1 dist/default/production\2021_ENCM369.production
 _ANSELA 400 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 _ANSELB 408 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 _G_u32SystemTime1s 505 0 COMRAM 1 bssCOMRAM dist/default/production\2021_ENCM369.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sfk8.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sfk8.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sam8.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sam8.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\2021_ENCM369.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\2021_ENCM369.production.o
 __size_of_UserAppInitialize 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
@@ -243,7 +243,7 @@ __Hbank36 0 0 ABS 0 bank36 dist/default/production\2021_ENCM369.production.o
 __Hbank37 0 0 ABS 0 bank37 dist/default/production\2021_ENCM369.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\2021_ENCM369.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\2021_ENCM369.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\landa\AppData\Local\Temp\sfk8.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\landa\AppData\Local\Temp\sam8.o
 _SystemSleep 1FF54 0 CODE 0 text3 dist/default/production\2021_ENCM369.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\2021_ENCM369.production.o
 __Hconfig 30000A 0 CONFIG 4 config dist/default/production\2021_ENCM369.production.o
@@ -336,8 +336,8 @@ __end_of_SysTickSetup 1FFAC 0 CODE 0 text4 dist/default/production\2021_ENCM369.
 _UserAppInitialize 1FF56 0 CODE 0 text2 dist/default/production\2021_ENCM369.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\2021_ENCM369.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\2021_ENCM369.production.o
-stackhi 25FF 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sfk8.o
-stacklo 560 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sfk8.o
+stackhi 25FF 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sam8.o
+stacklo 560 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sam8.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\2021_ENCM369.production.o
 __Lspace_0 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Lspace_1 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
@@ -360,7 +360,7 @@ __ptext4 1FF8A 0 CODE 0 text4 dist/default/production\2021_ENCM369.production.o
 __ptext5 1FF6A 0 CODE 0 text5 dist/default/production\2021_ENCM369.production.o
 __ptext6 1FF52 0 CODE 0 text6 dist/default/production\2021_ENCM369.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\2021_ENCM369.production.o
-__ramtop 2600 0 RAM 0 ramtop C:\Users\landa\AppData\Local\Temp\sfk8.o
+__ramtop 2600 0 RAM 0 ramtop C:\Users\landa\AppData\Local\Temp\sam8.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\2021_ENCM369.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\2021_ENCM369.production.o
 _ClockSetup 1FF52 0 CODE 0 text6 dist/default/production\2021_ENCM369.production.o
