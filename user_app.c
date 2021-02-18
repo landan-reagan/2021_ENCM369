@@ -94,8 +94,17 @@ Promises:
 */
 void UserAppRun(void)
 {
-
-
+    if (PORTB != LATB)
+    {
+        if (LATA < 0xBF)
+        {
+            LATA += 0x01;
+        }
+        else{
+            LATA = 0x80;
+        }
+    }
+    
 } /* end UserAppRun */
 
 

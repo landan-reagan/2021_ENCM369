@@ -27315,6 +27315,15 @@ void UserAppInitialize(void)
 # 95 "user_app.c"
 void UserAppRun(void)
 {
-
+    if (PORTB != LATB)
+    {
+        if (LATA < 0xBF)
+        {
+            LATA += 0x01;
+        }
+        else{
+            LATA = 0x80;
+        }
+    }
 
 }
