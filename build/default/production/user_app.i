@@ -27315,6 +27315,27 @@ void UserAppInitialize(void)
 # 95 "user_app.c"
 void UserAppRun(void)
 {
+    static u32 u32Counter = 0x00;
+
+    LATA = 0x80 | u32Counter;
+
+    u32 u32InputB = (PORTB & 0x20);
+
+    while (u32InputB == 0x00)
+    {
+        u32InputB = (PORTB & 0x20);
+        if (u32InputB == 0x20)
+        {
+            if (u32Counter < 0x3F)
+            {
+                u32Counter += 0x01;
+            }
+            else{
+                u32Counter = 0x00;
+            }
+        }
+    }
+
     if (PORTB != LATB)
     {
         if (LATA < 0xBF)
@@ -27326,4 +27347,10 @@ void UserAppRun(void)
         }
     }
 
+    u32 u32Delay = 0;
+
+    while (u32Delay<8000)
+    {
+        u32Delay++;
+    }
 }

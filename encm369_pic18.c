@@ -88,12 +88,11 @@ Promises:
 */
 void GpioSetup(void)
 {
-    TRISA = 0x00;
-    LATA = 0x80;
-    ANSELA = 0x00;
+    TRISA = 0x00; /* IO pin selection */
+    LATA = 0x80; /* IO values */
+    ANSELA = 0x00;  /* Digital/analog selection */
     
     TRISB = 0x20;
-    PORTB = 0x00;
     LATB = 0x00;
     ANSELB = 0x00;
 } /* end GpioSetup() */

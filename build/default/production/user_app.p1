@@ -1,13 +1,13 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"46157 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
+"45585 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 45585: extern volatile unsigned char LATA __attribute__((address(0x4BE)));
+[v _LATA `Vuc ~T0 @X0 0 e@1214 ]
+"46157
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 46157: extern volatile unsigned char PORTB __attribute__((address(0x4CF)));
 [v _PORTB `Vuc ~T0 @X0 0 e@1231 ]
 "45647
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 45647: extern volatile unsigned char LATB __attribute__((address(0x4BF)));
 [v _LATB `Vuc ~T0 @X0 0 e@1215 ]
-"45585
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 45585: extern volatile unsigned char LATA __attribute__((address(0x4BE)));
-[v _LATA `Vuc ~T0 @X0 0 e@1214 ]
 "30 ./configuration.h
 [p x FEXTOSC  =  OFF     ]
 "31
@@ -2553,40 +2553,127 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _UserAppRun ]
 [f ]
 "97
-[; ;user_app.c: 97:     if (PORTB != LATB)
-[e $ ! != -> _PORTB `i -> _LATB `i 2274  ]
-"98
-[; ;user_app.c: 98:     {
-{
+[; ;user_app.c: 97:     static u32 u32Counter = 0x00;
+[v F15920 `ul ~T0 @X0 1 s u32Counter ]
+[i F15920
+-> -> -> 0 `i `l `ul
+]
 "99
-[; ;user_app.c: 99:         if (LATA < 0xBF)
-[e $ ! < -> _LATA `i -> 191 `i 2275  ]
-"100
-[; ;user_app.c: 100:         {
-{
+[; ;user_app.c: 99:     LATA = 0x80 | u32Counter;
+[e = _LATA -> | -> -> -> 128 `i `l `ul F15920 `uc ]
 "101
-[; ;user_app.c: 101:             LATA += 0x01;
-[e =+ _LATA -> -> 1 `i `Vuc ]
-"102
-[; ;user_app.c: 102:         }
-}
-[e $U 2276  ]
+[; ;user_app.c: 101:     u32 u32InputB = (PORTB & 0x20);
+[v _u32InputB `ul ~T0 @X0 1 a ]
+[e = _u32InputB -> -> & -> _PORTB `i -> 32 `i `l `ul ]
 "103
-[; ;user_app.c: 103:         else{
+[; ;user_app.c: 103:     while (u32InputB == 0x00)
+[e $U 2274  ]
 [e :U 2275 ]
-{
 "104
-[; ;user_app.c: 104:             LATA = 0x80;
-[e = _LATA -> -> 128 `i `uc ]
+[; ;user_app.c: 104:     {
+{
 "105
-[; ;user_app.c: 105:         }
-}
-[e :U 2276 ]
+[; ;user_app.c: 105:         u32InputB = (PORTB & 0x20);
+[e = _u32InputB -> -> & -> _PORTB `i -> 32 `i `l `ul ]
 "106
-[; ;user_app.c: 106:     }
+[; ;user_app.c: 106:         if (u32InputB == 0x20)
+[e $ ! == _u32InputB -> -> -> 32 `i `l `ul 2277  ]
+"107
+[; ;user_app.c: 107:         {
+{
+"108
+[; ;user_app.c: 108:             if (u32Counter < 0x3F)
+[e $ ! < F15920 -> -> -> 63 `i `l `ul 2278  ]
+"109
+[; ;user_app.c: 109:             {
+{
+"110
+[; ;user_app.c: 110:                 u32Counter += 0x01;
+[e =+ F15920 -> -> -> 1 `i `l `ul ]
+"111
+[; ;user_app.c: 111:             }
+}
+[e $U 2279  ]
+"112
+[; ;user_app.c: 112:             else{
+[e :U 2278 ]
+{
+"113
+[; ;user_app.c: 113:                 u32Counter = 0x00;
+[e = F15920 -> -> -> 0 `i `l `ul ]
+"114
+[; ;user_app.c: 114:             }
+}
+[e :U 2279 ]
+"115
+[; ;user_app.c: 115:         }
+}
+[e :U 2277 ]
+"116
+[; ;user_app.c: 116:     }
 }
 [e :U 2274 ]
-"108
-[; ;user_app.c: 108: }
+"103
+[; ;user_app.c: 103:     while (u32InputB == 0x00)
+[e $ == _u32InputB -> -> -> 0 `i `l `ul 2275  ]
+[e :U 2276 ]
+"118
+[; ;user_app.c: 118:     if (PORTB != LATB)
+[e $ ! != -> _PORTB `i -> _LATB `i 2280  ]
+"119
+[; ;user_app.c: 119:     {
+{
+"120
+[; ;user_app.c: 120:         if (LATA < 0xBF)
+[e $ ! < -> _LATA `i -> 191 `i 2281  ]
+"121
+[; ;user_app.c: 121:         {
+{
+"122
+[; ;user_app.c: 122:             LATA += 0x01;
+[e =+ _LATA -> -> 1 `i `Vuc ]
+"123
+[; ;user_app.c: 123:         }
+}
+[e $U 2282  ]
+"124
+[; ;user_app.c: 124:         else{
+[e :U 2281 ]
+{
+"125
+[; ;user_app.c: 125:             LATA = 0x80;
+[e = _LATA -> -> 128 `i `uc ]
+"126
+[; ;user_app.c: 126:         }
+}
+[e :U 2282 ]
+"127
+[; ;user_app.c: 127:     }
+}
+[e :U 2280 ]
+"129
+[; ;user_app.c: 129:     u32 u32Delay = 0;
+[v _u32Delay `ul ~T0 @X0 1 a ]
+[e = _u32Delay -> -> -> 0 `i `l `ul ]
+"131
+[; ;user_app.c: 131:     while (u32Delay<8000)
+[e $U 2283  ]
+[e :U 2284 ]
+"132
+[; ;user_app.c: 132:     {
+{
+"133
+[; ;user_app.c: 133:         u32Delay++;
+[e ++ _u32Delay -> -> -> 1 `i `l `ul ]
+"134
+[; ;user_app.c: 134:     }
+}
+[e :U 2283 ]
+"131
+[; ;user_app.c: 131:     while (u32Delay<8000)
+[e $ < _u32Delay -> -> -> 8000 `i `l `ul 2284  ]
+[e :U 2285 ]
+"135
+[; ;user_app.c: 135: }
 [e :UE 2273 ]
 }

@@ -31,9 +31,9 @@
 [v _ClockSetup ClockSetup `(v  1 e 1 0 ]
 "89
 [v _GpioSetup GpioSetup `(v  1 e 1 0 ]
-"114
+"113
 [v _SysTickSetup SysTickSetup `(v  1 e 1 0 ]
-"136
+"135
 [v _SystemSleep SystemSleep `(v  1 e 1 0 ]
 "35 C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
 [v _main main `(v  1 e 1 0 ]
@@ -72,27 +72,33 @@
 "95 C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
 [v _UserAppRun UserAppRun `(v  1 e 1 0 ]
 {
-"108
+"101
+[v UserAppRun@u32InputB u32InputB `ul  1 a 4 5 ]
+"129
+[v UserAppRun@u32Delay u32Delay `ul  1 a 4 1 ]
+"97
+[v UserAppRun@u32Counter u32Counter `ul  1 s 4 u32Counter ]
+"135
 } 0
 "76
 [v _UserAppInitialize UserAppInitialize `(v  1 e 1 0 ]
 {
 "80
 } 0
-"136 C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+"135 C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
 [v _SystemSleep SystemSleep `(v  1 e 1 0 ]
 {
-"139
+"138
 } 0
-"114
+"113
 [v _SysTickSetup SysTickSetup `(v  1 e 1 0 ]
 {
-"119
+"118
 } 0
 "89
 [v _GpioSetup GpioSetup `(v  1 e 1 0 ]
 {
-"99
+"98
 } 0
 "70
 [v _ClockSetup ClockSetup `(v  1 e 1 0 ]

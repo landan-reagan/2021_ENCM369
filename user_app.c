@@ -94,6 +94,27 @@ Promises:
 */
 void UserAppRun(void)
 {
+    static u32 u32Counter = 0x00; /* Holds the current binary value of the counter */
+    
+    LATA = 0x80 | u32Counter; /* Update pins with current counter variable value */
+    
+    u32 u32InputB = (PORTB & 0x20);
+    
+    while (u32InputB == 0x00) /* While there is no input */
+    {
+        u32InputB = (PORTB & 0x20); /* Read input pin */
+        if (u32InputB == 0x20)  /* If pin has changed to high */
+        {
+            if (u32Counter < 0x3F) /* Check if counter variable has reaches its maximum 6 bit binary value */
+            {
+                u32Counter += 0x01;
+            }
+            else{ /* Reset counter variable */
+                u32Counter = 0x00;
+            } /* End counter change */
+        } /* End button check */
+    }
+    
     if (PORTB != LATB)
     {
         if (LATA < 0xBF)
@@ -105,6 +126,12 @@ void UserAppRun(void)
         }
     }
     
+    u32 u32Delay = 0; /* Used in debounce routine */
+    
+    while (u32Delay<8000)
+    {
+        u32Delay++;
+    }
 } /* end UserAppRun */
 
 

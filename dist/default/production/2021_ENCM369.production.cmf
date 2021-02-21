@@ -12,18 +12,19 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\2021_ENCM369.production.o
-cinit CODE 0 1FF58 1FF58 12 1
+cinit CODE 0 1FE86 1FE86 12 1
 idloc IDLOC 5 200000 200000 20 1
-text0 CODE 0 1FFAC 1FFAC 22 1
-text1 CODE 0 1FFCE 1FFCE 2E 1
-text2 CODE 0 1FF56 1FF56 2 1
-text3 CODE 0 1FF54 1FF54 2 1
-text4 CODE 0 1FF8A 1FF8A 22 1
-text5 CODE 0 1FF6A 1FF6A 20 1
-text6 CODE 0 1FF52 1FF52 2 1
-bssCOMRAM COMRAM 1 501 501 D 1
+text0 CODE 0 1FED6 1FED6 22 1
+text1 CODE 0 1FEF8 1FEF8 104 1
+text2 CODE 0 1FE84 1FE84 2 1
+text3 CODE 0 1FE82 1FE82 2 1
+text4 CODE 0 1FEB4 1FEB4 22 1
+text5 CODE 0 1FE98 1FE98 1C 1
+text6 CODE 0 1FE80 1FE80 2 1
+cstackCOMRAM COMRAM 1 512 512 9 1
+bssCOMRAM COMRAM 1 501 501 11 1
 config CONFIG 4 300000 300000 A 1
-$C:\Users\landa\AppData\Local\Temp\sam8.o
+$C:\Users\landa\AppData\Local\Temp\sd6o.o
 idloc IDLOC 5 200000 200000 20 1
 init CODE 0 1FFFC 1FFFC 4 1
 reset_vec CODE 0 0 0 4 1
@@ -41,10 +42,10 @@ BANK6 600-6FF 1
 BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
-CONST 4-1FF51 1
+CONST 4-1FE7F 1
 STACK 560-25FF 1
-SMALLCONST 2600-1FF51 1
-CODE 4-1FF51 1
+SMALLCONST 2600-1FE7F 1
+CODE 4-1FE7F 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
@@ -73,12 +74,12 @@ BANK34 2200-22FF 1
 BANK35 2300-23FF 1
 BANK36 2400-24FF 1
 BANK37 2500-25FF 1
-BIGRAM 50E-25FF 1
-COMRAM 50E-55F 1
+BIGRAM 51B-25FF 1
+COMRAM 51B-55F 1
 CONFIG 30000A-300011 1
 EEDATA 380000-3803FF 1
 MEDIUMCONST 2600-FFFF 1
-MEDIUMCONST 12600-1FF51 1
+MEDIUMCONST 12600-1FE7F 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -93,52 +94,67 @@ MEDIUMCONST 12600-1FF51 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\2021_ENCM369.production.o
-1FF52 text6 CODE >70:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF52 text6 CODE >74:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF6A text5 CODE >89:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF6A text5 CODE >91:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF6E text5 CODE >92:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF72 text5 CODE >93:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF78 text5 CODE >95:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF7C text5 CODE >96:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF80 text5 CODE >97:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF84 text5 CODE >98:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF88 text5 CODE >99:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF8A text4 CODE >114:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF8A text4 CODE >116:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF9A text4 CODE >117:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FFAA text4 CODE >119:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF54 text3 CODE >136:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF54 text3 CODE >139:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
-1FF56 text2 CODE >76:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
-1FF56 text2 CODE >80:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
-1FFCE text1 CODE >95:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
-1FFCE text1 CODE >97:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
-1FFE0 text1 CODE >99:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
-1FFF0 text1 CODE >101:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
-1FFF2 text1 CODE >102:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
-1FFF6 text1 CODE >104:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
-1FFFA text1 CODE >108:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
-1FFAC text0 CODE >35:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
-1FFAC text0 CODE >37:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
-1FFAE text0 CODE >40:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
-1FFB2 text0 CODE >41:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
-1FFB6 text0 CODE >42:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
-1FFBA text0 CODE >47:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
-1FFBE text0 CODE >57:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
-1FFC2 text0 CODE >62:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
-1FF58 cinit CODE >5089:C:\Users\landa\AppData\Local\Temp\sam8.s
-1FF58 cinit CODE >5091:C:\Users\landa\AppData\Local\Temp\sam8.s
-1FF58 cinit CODE >5094:C:\Users\landa\AppData\Local\Temp\sam8.s
-1FF58 cinit CODE >5116:C:\Users\landa\AppData\Local\Temp\sam8.s
-1FF5C cinit CODE >5117:C:\Users\landa\AppData\Local\Temp\sam8.s
-1FF5E cinit CODE >5118:C:\Users\landa\AppData\Local\Temp\sam8.s
-1FF5E cinit CODE >5119:C:\Users\landa\AppData\Local\Temp\sam8.s
-1FF60 cinit CODE >5120:C:\Users\landa\AppData\Local\Temp\sam8.s
-1FF62 cinit CODE >5121:C:\Users\landa\AppData\Local\Temp\sam8.s
-1FF64 cinit CODE >5127:C:\Users\landa\AppData\Local\Temp\sam8.s
-1FF64 cinit CODE >5129:C:\Users\landa\AppData\Local\Temp\sam8.s
-1FF66 cinit CODE >5130:C:\Users\landa\AppData\Local\Temp\sam8.s
+1FE80 text6 CODE >70:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FE80 text6 CODE >74:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FE98 text5 CODE >89:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FE98 text5 CODE >91:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FE9C text5 CODE >92:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FEA0 text5 CODE >93:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FEA6 text5 CODE >95:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FEAA text5 CODE >96:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FEAE text5 CODE >97:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FEB2 text5 CODE >98:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FEB4 text4 CODE >113:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FEB4 text4 CODE >115:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FEC4 text4 CODE >116:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FED4 text4 CODE >118:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FE82 text3 CODE >135:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FE82 text3 CODE >138:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\encm369_pic18.c
+1FE84 text2 CODE >76:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FE84 text2 CODE >80:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FEF8 text1 CODE >95:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FEF8 text1 CODE >99:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FEFE text1 CODE >101:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FF12 text1 CODE >103:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FF16 text1 CODE >105:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FF2A text1 CODE >106:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FF42 text1 CODE >108:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FF5C text1 CODE >110:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FF68 text1 CODE >111:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FF6C text1 CODE >113:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FF7C text1 CODE >103:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FF92 text1 CODE >118:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FFA4 text1 CODE >120:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FFB4 text1 CODE >122:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FFB6 text1 CODE >123:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FFBA text1 CODE >125:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FFBE text1 CODE >127:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FFBE text1 CODE >129:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FFCE text1 CODE >131:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FFD2 text1 CODE >133:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FFDE text1 CODE >131:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FFDE text1 CODE >134:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FFFA text1 CODE >135:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
+1FED6 text0 CODE >35:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
+1FED6 text0 CODE >37:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
+1FED8 text0 CODE >40:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
+1FEDC text0 CODE >41:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
+1FEE0 text0 CODE >42:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
+1FEE4 text0 CODE >47:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
+1FEE8 text0 CODE >57:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
+1FEEC text0 CODE >62:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
+1FE86 cinit CODE >5090:C:\Users\landa\AppData\Local\Temp\sd6o.s
+1FE86 cinit CODE >5092:C:\Users\landa\AppData\Local\Temp\sd6o.s
+1FE86 cinit CODE >5095:C:\Users\landa\AppData\Local\Temp\sd6o.s
+1FE86 cinit CODE >5119:C:\Users\landa\AppData\Local\Temp\sd6o.s
+1FE8A cinit CODE >5120:C:\Users\landa\AppData\Local\Temp\sd6o.s
+1FE8C cinit CODE >5121:C:\Users\landa\AppData\Local\Temp\sd6o.s
+1FE8C cinit CODE >5122:C:\Users\landa\AppData\Local\Temp\sd6o.s
+1FE8E cinit CODE >5123:C:\Users\landa\AppData\Local\Temp\sd6o.s
+1FE90 cinit CODE >5124:C:\Users\landa\AppData\Local\Temp\sd6o.s
+1FE92 cinit CODE >5130:C:\Users\landa\AppData\Local\Temp\sd6o.s
+1FE92 cinit CODE >5132:C:\Users\landa\AppData\Local\Temp\sd6o.s
+1FE94 cinit CODE >5133:C:\Users\landa\AppData\Local\Temp\sd6o.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -153,43 +169,43 @@ $dist/default/production\2021_ENCM369.production.o
 %SYMTAB
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\2021_ENCM369.production.o
 __Hspace_0 20000 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
-__Hspace_1 50E 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
+__Hspace_1 51B 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\2021_ENCM369.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\landa\AppData\Local\Temp\sam8.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\landa\AppData\Local\Temp\sd6o.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\2021_ENCM369.production.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\2021_ENCM369.production.o
 _LATA 4BE 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 _LATB 4BF 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
-___sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sam8.o
-_main 1FFAC 0 CODE 0 text0 dist/default/production\2021_ENCM369.production.o
-start 1FFFC 0 CODE 0 init C:\Users\landa\AppData\Local\Temp\sam8.o
+___sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sd6o.o
+_main 1FED6 0 CODE 0 text0 dist/default/production\2021_ENCM369.production.o
+start 1FFFC 0 CODE 0 init C:\Users\landa\AppData\Local\Temp\sd6o.o
 __size_of_main 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\2021_ENCM369.production.o
 __size_of_SystemSleep 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\2021_ENCM369.production.o
-__accesstop 560 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sam8.o
-intlevel0 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sam8.o
-intlevel1 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sam8.o
-intlevel2 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sam8.o
-intlevel3 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sam8.o
+__accesstop 560 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sd6o.o
+intlevel0 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sd6o.o
+intlevel1 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sd6o.o
+intlevel2 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sd6o.o
+intlevel3 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sd6o.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\2021_ENCM369.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\2021_ENCM369.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\2021_ENCM369.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\2021_ENCM369.production.o
-_UserAppRun 1FFCE 0 CODE 0 text1 dist/default/production\2021_ENCM369.production.o
+_UserAppRun 1FEF8 0 CODE 0 text1 dist/default/production\2021_ENCM369.production.o
 _ANSELA 400 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 _ANSELB 408 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 _G_u32SystemTime1s 505 0 COMRAM 1 bssCOMRAM dist/default/production\2021_ENCM369.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sam8.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sam8.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sd6o.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sd6o.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\2021_ENCM369.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\2021_ENCM369.production.o
 __size_of_UserAppInitialize 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __size_of_ClockSetup 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 _G_u32SystemFlags 501 0 COMRAM 1 bssCOMRAM dist/default/production\2021_ENCM369.production.o
-start_initialization 1FF58 0 CODE 0 cinit dist/default/production\2021_ENCM369.production.o
+start_initialization 1FE86 0 CODE 0 cinit dist/default/production\2021_ENCM369.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\2021_ENCM369.production.o
 __end_of_UserAppRun 1FFFC 0 CODE 0 text1 dist/default/production\2021_ENCM369.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
@@ -243,8 +259,8 @@ __Hbank36 0 0 ABS 0 bank36 dist/default/production\2021_ENCM369.production.o
 __Hbank37 0 0 ABS 0 bank37 dist/default/production\2021_ENCM369.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\2021_ENCM369.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\2021_ENCM369.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\landa\AppData\Local\Temp\sam8.o
-_SystemSleep 1FF54 0 CODE 0 text3 dist/default/production\2021_ENCM369.production.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\landa\AppData\Local\Temp\sd6o.o
+_SystemSleep 1FE82 0 CODE 0 text3 dist/default/production\2021_ENCM369.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\2021_ENCM369.production.o
 __Hconfig 30000A 0 CONFIG 4 config dist/default/production\2021_ENCM369.production.o
 __Lbank5 0 0 ABS 0 bank5 dist/default/production\2021_ENCM369.production.o
@@ -283,15 +299,15 @@ __Lrbit 0 0 COMRAM 1 rbit dist/default/production\2021_ENCM369.production.o
 __Lrbss 0 0 COMRAM 1 rbss dist/default/production\2021_ENCM369.production.o
 __Ltemp 0 0 COMRAM 1 temp dist/default/production\2021_ENCM369.production.o
 __Ltext 0 0 ABS 0 text dist/default/production\2021_ENCM369.production.o
-__end_of_UserAppInitialize 1FF58 0 CODE 0 text2 dist/default/production\2021_ENCM369.production.o
+__end_of_UserAppInitialize 1FE86 0 CODE 0 text2 dist/default/production\2021_ENCM369.production.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\2021_ENCM369.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\2021_ENCM369.production.o
 __S0 20000 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
-__S1 50E 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
+__S1 51B 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __S2 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __S4 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __S5 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
-_SysTickSetup 1FF8A 0 CODE 0 text4 dist/default/production\2021_ENCM369.production.o
+_SysTickSetup 1FEB4 0 CODE 0 text4 dist/default/production\2021_ENCM369.production.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\2021_ENCM369.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\2021_ENCM369.production.o
 __Hramtop 2600 0 RAM 0 ramtop dist/default/production\2021_ENCM369.production.o
@@ -329,15 +345,16 @@ __Lbank36 0 0 ABS 0 bank36 dist/default/production\2021_ENCM369.production.o
 __Lbank37 0 0 ABS 0 bank37 dist/default/production\2021_ENCM369.production.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\2021_ENCM369.production.o
 __Lbigram 0 0 ABS 0 bigram dist/default/production\2021_ENCM369.production.o
+UserAppRun@u32Delay 513 0 COMRAM 1 cstackCOMRAM dist/default/production\2021_ENCM369.production.o
 __Lcomram 0 0 ABS 0 comram dist/default/production\2021_ENCM369.production.o
 __Lconfig 0 0 CONFIG 4 config dist/default/production\2021_ENCM369.production.o
 __size_of_UserAppRun 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
-__end_of_SysTickSetup 1FFAC 0 CODE 0 text4 dist/default/production\2021_ENCM369.production.o
-_UserAppInitialize 1FF56 0 CODE 0 text2 dist/default/production\2021_ENCM369.production.o
+__end_of_SysTickSetup 1FED6 0 CODE 0 text4 dist/default/production\2021_ENCM369.production.o
+_UserAppInitialize 1FE84 0 CODE 0 text2 dist/default/production\2021_ENCM369.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\2021_ENCM369.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\2021_ENCM369.production.o
-stackhi 25FF 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sam8.o
-stacklo 560 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sam8.o
+stackhi 25FF 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sd6o.o
+stacklo 560 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sd6o.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\2021_ENCM369.production.o
 __Lspace_0 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Lspace_1 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
@@ -346,33 +363,35 @@ __Lspace_4 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __pbssCOMRAM 501 0 COMRAM 1 bssCOMRAM dist/default/production\2021_ENCM369.production.o
 _G_u8UserAppFlags 50D 0 COMRAM 1 bssCOMRAM dist/default/production\2021_ENCM369.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\2021_ENCM369.production.o
-end_of_initialization 1FF64 0 CODE 0 cinit dist/default/production\2021_ENCM369.production.o
+end_of_initialization 1FE92 0 CODE 0 cinit dist/default/production\2021_ENCM369.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\2021_ENCM369.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\2021_ENCM369.production.o
 __Lramtop 2600 0 RAM 0 ramtop dist/default/production\2021_ENCM369.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\2021_ENCM369.production.o
-__pcinit 1FF58 0 CODE 0 cinit dist/default/production\2021_ENCM369.production.o
-__ptext0 1FFAC 0 CODE 0 text0 dist/default/production\2021_ENCM369.production.o
-__ptext1 1FFCE 0 CODE 0 text1 dist/default/production\2021_ENCM369.production.o
-__ptext2 1FF56 0 CODE 0 text2 dist/default/production\2021_ENCM369.production.o
-__ptext3 1FF54 0 CODE 0 text3 dist/default/production\2021_ENCM369.production.o
-__ptext4 1FF8A 0 CODE 0 text4 dist/default/production\2021_ENCM369.production.o
-__ptext5 1FF6A 0 CODE 0 text5 dist/default/production\2021_ENCM369.production.o
-__ptext6 1FF52 0 CODE 0 text6 dist/default/production\2021_ENCM369.production.o
+__pcinit 1FE86 0 CODE 0 cinit dist/default/production\2021_ENCM369.production.o
+__ptext0 1FED6 0 CODE 0 text0 dist/default/production\2021_ENCM369.production.o
+__ptext1 1FEF8 0 CODE 0 text1 dist/default/production\2021_ENCM369.production.o
+__ptext2 1FE84 0 CODE 0 text2 dist/default/production\2021_ENCM369.production.o
+__ptext3 1FE82 0 CODE 0 text3 dist/default/production\2021_ENCM369.production.o
+__ptext4 1FEB4 0 CODE 0 text4 dist/default/production\2021_ENCM369.production.o
+__ptext5 1FE98 0 CODE 0 text5 dist/default/production\2021_ENCM369.production.o
+__ptext6 1FE80 0 CODE 0 text6 dist/default/production\2021_ENCM369.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\2021_ENCM369.production.o
-__ramtop 2600 0 RAM 0 ramtop C:\Users\landa\AppData\Local\Temp\sam8.o
+__ramtop 2600 0 RAM 0 ramtop C:\Users\landa\AppData\Local\Temp\sd6o.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\2021_ENCM369.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\2021_ENCM369.production.o
-_ClockSetup 1FF52 0 CODE 0 text6 dist/default/production\2021_ENCM369.production.o
+UserAppRun@u32InputB 517 0 COMRAM 1 cstackCOMRAM dist/default/production\2021_ENCM369.production.o
+_ClockSetup 1FE80 0 CODE 0 text6 dist/default/production\2021_ENCM369.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\2021_ENCM369.production.o
-__end_of_SystemSleep 1FF56 0 CODE 0 text3 dist/default/production\2021_ENCM369.production.o
+__end_of_SystemSleep 1FE84 0 CODE 0 text3 dist/default/production\2021_ENCM369.production.o
 ___param_bank 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\2021_ENCM369.production.o
-__end_of__initialization 1FF64 0 CODE 0 cinit dist/default/production\2021_ENCM369.production.o
+__end_of__initialization 1FE92 0 CODE 0 cinit dist/default/production\2021_ENCM369.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\2021_ENCM369.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\2021_ENCM369.production.o
-__pcstackCOMRAM 0 0 COMRAM 1 cstackCOMRAM dist/default/production\2021_ENCM369.production.o
-__end_of_main 1FFCE 0 CODE 0 text0 dist/default/production\2021_ENCM369.production.o
+UserAppRun@u32Counter 50E 0 COMRAM 1 bssCOMRAM dist/default/production\2021_ENCM369.production.o
+__pcstackCOMRAM 512 0 COMRAM 1 cstackCOMRAM dist/default/production\2021_ENCM369.production.o
+__end_of_main 1FEF8 0 CODE 0 text0 dist/default/production\2021_ENCM369.production.o
 _PORTB 4CF 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 _TRISA 4C6 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 _TRISB 4C7 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
@@ -384,14 +403,14 @@ __LRAM 1 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Lbss 0 0 RAM 1 bss dist/default/production\2021_ENCM369.production.o
 __Lram 0 0 ABS 0 ram dist/default/production\2021_ENCM369.production.o
 __Lsfr 0 0 ABS 0 sfr dist/default/production\2021_ENCM369.production.o
-__end_of_GpioSetup 1FF8A 0 CODE 0 text5 dist/default/production\2021_ENCM369.production.o
+__end_of_GpioSetup 1FEB4 0 CODE 0 text5 dist/default/production\2021_ENCM369.production.o
 __size_of_GpioSetup 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
-__end_of_ClockSetup 1FF54 0 CODE 0 text6 dist/default/production\2021_ENCM369.production.o
-__initialization 1FF58 0 CODE 0 cinit dist/default/production\2021_ENCM369.production.o
+__end_of_ClockSetup 1FE82 0 CODE 0 text6 dist/default/production\2021_ENCM369.production.o
+__initialization 1FE86 0 CODE 0 cinit dist/default/production\2021_ENCM369.production.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\2021_ENCM369.production.o
 __Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\2021_ENCM369.production.o
 __Lifardata 0 0 CODE 0 ifardata dist/default/production\2021_ENCM369.production.o
-_GpioSetup 1FF6A 0 CODE 0 text5 dist/default/production\2021_ENCM369.production.o
+_GpioSetup 1FE98 0 CODE 0 text5 dist/default/production\2021_ENCM369.production.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\2021_ENCM369.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
@@ -417,17 +436,17 @@ __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\2021_ENCM369.p
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 1FF58 1FF58 12 1
-text0 0 1FFAC 1FFAC 22 1
-text1 0 1FFCE 1FFCE 2E 1
-text2 0 1FF56 1FF56 2 1
-text3 0 1FF54 1FF54 2 1
-text4 0 1FF8A 1FF8A 22 1
-text5 0 1FF6A 1FF6A 20 1
-text6 0 1FF52 1FF52 2 1
+cinit 0 1FE86 1FE86 12 1
+text0 0 1FED6 1FED6 22 1
+text1 0 1FEF8 1FEF8 104 1
+text2 0 1FE84 1FE84 2 1
+text3 0 1FE82 1FE82 2 1
+text4 0 1FEB4 1FEB4 22 1
+text5 0 1FE98 1FE98 1C 1
+text6 0 1FE80 1FE80 2 1
 init 0 1FFFC 1FFFC 4 1
 reset_vec 0 0 0 4 1
-bssCOMRAM 1 501 501 D 1
+bssCOMRAM 1 501 501 1A 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal
