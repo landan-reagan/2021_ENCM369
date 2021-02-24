@@ -98,24 +98,25 @@ void UserAppRun(void)
     
     LATA = 0x80 | u32Counter; /* Update pins with current counter variable value */
     
-    u32 u32InputB = (PORTB & 0x20);
+    u32 u32InputB = (PORTB & 0x20); /* Reads input from B pins */
     
-    while (u32InputB == 0x00) /* While there is no input */
+    while (u32InputB == 0x00) /* While there is no input on B pins */
     {
-        u32InputB = (PORTB & 0x20); /* Read input pin */
-        if (u32InputB == 0x20)  /* If pin has changed to high */
+        u32InputB = (PORTB & 0x20); /* Read input from B pins */
+        if (u32InputB == 0x20)  /* If pin 5 has changed to high */
         {
             if (u32Counter < 0x3F) /* Check if counter variable has reaches its maximum 6 bit binary value */
             {
-                u32Counter += 0x01;
+                u32Counter += 0x01; /* Increment counter */
             }
-            else{ /* Reset counter variable */
-                u32Counter = 0x00;
+            else 
+            { 
+                u32Counter = 0x00; /* Reset counter variable */
             } /* End counter change */
         } /* End button check */
     }
     
-    if (PORTB != LATB)
+    if (PORTB != LATB) /* Check if inputs are equal to stored values */
     {
         if (LATA < 0xBF)
         {
