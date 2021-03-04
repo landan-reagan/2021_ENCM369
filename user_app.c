@@ -79,7 +79,7 @@ void UserAppInitialize(void)
     LATA = 0x80; // IO Input/Output
     ANSELA = 0x00; // Digital/Analog Selector
     
-    T0CON0 = 0xB0;
+    T0CON0 = 0x90;
     T0CON1 = 0x54;
 
 } /* end UserAppInitialize() */
@@ -99,21 +99,47 @@ Promises:
 */
 void UserAppRun(void)
 {
-    if (PORTA <= 0xBF) /* Check if counter is less than maximum value */
-    {
-        PORTA += 1; /* Binary increment counter */
-    }
-    else /* Executes if counter is greater than maximum value */
-    {
-        PORTA = 0x80; /* Reset all ports to 0 except pin 7 */
-    }
+    static u32 u32DelayCounter=0;
+   
+    u32DelayCounter++;
     
-    u32 u32Counter = 0;
-    
-    while(u32Counter < 200000)
-    {
-        u32Counter ++;
-    } /* End of while loop delay */
+    if (u32DelayCounter==250) //Only runs every 250 times UserAppRun is called (1ms delay every time, 250ms total)
+        {
+        static u16 u16PatternIndex = 0;
+
+            u8 au8Pattern[16] = {0x15,
+                         0x2a,
+                         0x15,
+                         0x2a,
+                         0x20,
+                         0x10,
+                         0x08,
+                         0x04,
+                         0x02,
+                         0x01,
+                         0x02,
+                         0x04,
+                         0x08,
+                         0x10,
+                         0x20};
+
+        u8 u8LATATemp = LATA; // Store value of LATA into temporary 8 bit variable
+
+        u8LATATemp &= 0xC0; // Mask out 6 LSB's from LATATemp
+
+        u8LATATemp |= au8Pattern[u16PatternIndex]; // Update 6 LSB's with a certain value to LATATemp
+
+        LATA = u8LATATemp; // Update the value of LATA with the modified value in LATATemp
+
+        if (u16PatternIndex<15)
+        {
+            u16PatternIndex++;
+        }
+        else
+            u16PatternIndex=0;
+        
+        u32DelayCounter=0;
+    }
 
 } /* end UserAppRun */
 
