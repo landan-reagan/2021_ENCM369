@@ -76,7 +76,7 @@ Promises:
 void UserAppInitialize(void)
 {
     TRISA = 0x00; // I/O selection
-    LATA = 0x80; // IO Input/Output
+    LATA = 0x80; // Initialize pin values
     ANSELA = 0x00; // Digital/Analog Selector
     
     T0CON0 = 0x90;
@@ -103,40 +103,31 @@ void UserAppRun(void)
    
     u32DelayCounter++;
     
-    if (u32DelayCounter==250) //Only runs every 250 times UserAppRun is called (1ms delay every time, 250ms total)
+    if (u32DelayCounter == 150) //Only runs every 150 times UserAppRun is called (1ms delay every time, 150ms total)
         {
         static u16 u16PatternIndex = 0;
 
-            u8 au8Pattern[16] = {0x15,
-                         0x2a,
-                         0x15,
-                         0x2a,
-                         0x20,
-                         0x10,
-                         0x08,
-                         0x04,
-                         0x02,
-                         0x01,
-                         0x02,
-                         0x04,
-                         0x08,
-                         0x10,
-                         0x20};
+        u8 au8Pattern[6] = {0x01,
+                     0x02,
+                     0x04,
+                     0x08,
+                     0x10,
+                     0x20};
 
-        u8 u8LATATemp = LATA; // Store value of LATA into temporary 8 bit variable
+        u8 u8LATATemporary = LATA; // Store value of LATA into temporary 8 bit variable
 
-        u8LATATemp &= 0xC0; // Mask out 6 LSB's from LATATemp
+        u8LATATemporary &= 0xC0; // Mask out 6 LSB's from LATATemporary
 
-        u8LATATemp |= au8Pattern[u16PatternIndex]; // Update 6 LSB's with a certain value to LATATemp
+        u8LATATemporary |= au8Pattern[u16PatternIndex]; // Update 6 LSB's with a certain value to LATATemp
 
-        LATA = u8LATATemp; // Update the value of LATA with the modified value in LATATemp
+        LATA = u8LATATemporary; // Update the value of LATA with the modified value in LATATemp
 
-        if (u16PatternIndex<15)
+        if (u16PatternIndex < 5)
         {
             u16PatternIndex++;
         }
         else
-            u16PatternIndex=0;
+            u16PatternIndex = 0;
         
         u32DelayCounter=0;
     }

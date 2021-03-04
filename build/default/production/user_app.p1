@@ -1,7 +1,28 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"46095 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 46095: extern volatile unsigned char PORTA __attribute__((address(0x4CE)));
-[v _PORTA `Vuc ~T0 @X0 0 e@1230 ]
+"45840 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 45840: extern volatile unsigned char TRISA __attribute__((address(0x4C6)));
+[v _TRISA `Vuc ~T0 @X0 0 e@1222 ]
+"45585
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 45585: extern volatile unsigned char LATA __attribute__((address(0x4BE)));
+[v _LATA `Vuc ~T0 @X0 0 e@1214 ]
+"37918
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 37918: extern volatile unsigned char ANSELA __attribute__((address(0x400)));
+[v _ANSELA `Vuc ~T0 @X0 0 e@1024 ]
+"22627
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 22627: extern volatile unsigned char T0CON0 __attribute__((address(0x31A)));
+[v _T0CON0 `Vuc ~T0 @X0 0 e@794 ]
+"22725
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 22725: extern volatile unsigned char T0CON1 __attribute__((address(0x31B)));
+[v _T0CON1 `Vuc ~T0 @X0 0 e@795 ]
+"22373
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 22373: extern volatile unsigned char TMR0H __attribute__((address(0x319)));
+[v _TMR0H `Vuc ~T0 @X0 0 e@793 ]
+"22235
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 22235: extern volatile unsigned char TMR0L __attribute__((address(0x318)));
+[v _TMR0L `Vuc ~T0 @X0 0 e@792 ]
+"44870
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 44870: extern volatile unsigned char PIR3 __attribute__((address(0x4B1)));
+[v _PIR3 `Vuc ~T0 @X0 0 e@1201 ]
 "30 ./configuration.h
 [p x FEXTOSC  =  OFF     ]
 "31
@@ -2534,67 +2555,151 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _UserAppInitialize ]
 [f ]
+"78
+[; ;user_app.c: 78:     TRISA = 0x00;
+[e = _TRISA -> -> 0 `i `uc ]
+"79
+[; ;user_app.c: 79:     LATA = 0x80;
+[e = _LATA -> -> 128 `i `uc ]
 "80
-[; ;user_app.c: 80: }
+[; ;user_app.c: 80:     ANSELA = 0x00;
+[e = _ANSELA -> -> 0 `i `uc ]
+"82
+[; ;user_app.c: 82:     T0CON0 = 0x90;
+[e = _T0CON0 -> -> 144 `i `uc ]
+"83
+[; ;user_app.c: 83:     T0CON1 = 0x54;
+[e = _T0CON1 -> -> 84 `i `uc ]
+"85
+[; ;user_app.c: 85: }
 [e :UE 2272 ]
 }
-"95
-[; ;user_app.c: 95: void UserAppRun(void)
+"100
+[; ;user_app.c: 100: void UserAppRun(void)
 [v _UserAppRun `(v ~T0 @X0 1 ef ]
-"96
-[; ;user_app.c: 96: {
+"101
+[; ;user_app.c: 101: {
 {
 [e :U _UserAppRun ]
 [f ]
-"97
-[; ;user_app.c: 97:     if (PORTA <= 0xBF)
-[e $ ! <= -> _PORTA `i -> 191 `i 2274  ]
-"98
-[; ;user_app.c: 98:     {
-{
-"99
-[; ;user_app.c: 99:         PORTA += 1;
-[e =+ _PORTA -> -> 1 `i `Vuc ]
-"100
-[; ;user_app.c: 100:     }
-}
-[e $U 2275  ]
-"101
-[; ;user_app.c: 101:     else
-[e :U 2274 ]
 "102
-[; ;user_app.c: 102:     {
-{
-"103
-[; ;user_app.c: 103:         PORTA = 0x80;
-[e = _PORTA -> -> 128 `i `uc ]
+[; ;user_app.c: 102:     static u32 u32DelayCounter=0;
+[v F15922 `ul ~T0 @X0 1 s u32DelayCounter ]
+[i F15922
+-> -> -> 0 `i `l `ul
+]
 "104
-[; ;user_app.c: 104:     }
-}
-[e :U 2275 ]
+[; ;user_app.c: 104:     u32DelayCounter++;
+[e ++ F15922 -> -> -> 1 `i `l `ul ]
 "106
-[; ;user_app.c: 106:     u32 u32Counter = 0;
-[v _u32Counter `ul ~T0 @X0 1 a ]
-[e = _u32Counter -> -> -> 0 `i `l `ul ]
-"108
-[; ;user_app.c: 108:     while(u32Counter < 200000)
-[e $U 2276  ]
-[e :U 2277 ]
-"109
-[; ;user_app.c: 109:     {
+[; ;user_app.c: 106:     if (u32DelayCounter == 150)
+[e $ ! == F15922 -> -> -> 150 `i `l `ul 2274  ]
+"107
+[; ;user_app.c: 107:         {
 {
-"110
-[; ;user_app.c: 110:         u32Counter ++;
-[e ++ _u32Counter -> -> -> 1 `i `l `ul ]
-"111
-[; ;user_app.c: 111:     }
-}
-[e :U 2276 ]
 "108
-[; ;user_app.c: 108:     while(u32Counter < 200000)
-[e $ < _u32Counter -> -> 200000 `l `ul 2277  ]
-[e :U 2278 ]
-"113
-[; ;user_app.c: 113: }
+[; ;user_app.c: 108:         static u16 u16PatternIndex = 0;
+[v F15923 `us ~T0 @X0 1 s u16PatternIndex ]
+[i F15923
+-> -> 0 `i `us
+]
+[v F15924 `uc ~T0 @X0 -> 16 `i s ]
+[i F15924
+:U ..
+"110
+[; ;user_app.c: 110:             u8 au8Pattern[16] = {0x15,
+-> -> 21 `i `uc
+-> -> 42 `i `uc
+-> -> 21 `i `uc
+-> -> 42 `i `uc
+-> -> 32 `i `uc
+-> -> 16 `i `uc
+-> -> 8 `i `uc
+-> -> 4 `i `uc
+-> -> 2 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+-> -> 8 `i `uc
+-> -> 16 `i `uc
+-> -> 32 `i `uc
+..
+]
+[v _au8Pattern `uc ~T0 @X0 -> 16 `i a ]
+[e = _au8Pattern F15924 ]
+"126
+[; ;user_app.c: 126:         u8 u8LATATemp = LATA;
+[v _u8LATATemp `uc ~T0 @X0 1 a ]
+[e = _u8LATATemp _LATA ]
+"128
+[; ;user_app.c: 128:         u8LATATemp &= 0xC0;
+[e =& _u8LATATemp -> -> 192 `i `uc ]
+"130
+[; ;user_app.c: 130:         u8LATATemp |= au8Pattern[u16PatternIndex];
+[e =| _u8LATATemp -> *U + &U _au8Pattern * -> F15923 `ux -> -> # *U &U _au8Pattern `ui `ux `uc ]
+"132
+[; ;user_app.c: 132:         LATA = u8LATATemp;
+[e = _LATA _u8LATATemp ]
+"134
+[; ;user_app.c: 134:         if (u16PatternIndex<15)
+[e $ ! < -> F15923 `ui -> -> 15 `i `ui 2275  ]
+"135
+[; ;user_app.c: 135:         {
+{
+"136
+[; ;user_app.c: 136:             u16PatternIndex++;
+[e ++ F15923 -> -> 1 `i `us ]
+"137
+[; ;user_app.c: 137:         }
+}
+[e $U 2276  ]
+"138
+[; ;user_app.c: 138:         else
+[e :U 2275 ]
+"139
+[; ;user_app.c: 139:             u16PatternIndex=0;
+[e = F15923 -> -> 0 `i `us ]
+[e :U 2276 ]
+"141
+[; ;user_app.c: 141:         u32DelayCounter=0;
+[e = F15922 -> -> -> 0 `i `l `ul ]
+"142
+[; ;user_app.c: 142:     }
+}
+[e :U 2274 ]
+"144
+[; ;user_app.c: 144: }
 [e :UE 2273 ]
+}
+"166
+[; ;user_app.c: 166: void TimeXus(u16 u16TimerValue_)
+[v _TimeXus `(v ~T0 @X0 1 ef1`us ]
+"167
+[; ;user_app.c: 167: {
+{
+[e :U _TimeXus ]
+"166
+[; ;user_app.c: 166: void TimeXus(u16 u16TimerValue_)
+[v _u16TimerValue_ `us ~T0 @X0 1 r1 ]
+"167
+[; ;user_app.c: 167: {
+[f ]
+"168
+[; ;user_app.c: 168:     T0CON0 &= 0x7f;
+[e =& _T0CON0 -> -> 127 `i `Vuc ]
+"170
+[; ;user_app.c: 170:     TMR0H = (u8)(0x00ff - ((0xff00 & u16TimerValue_) >> 8));
+[e = _TMR0H -> - -> -> 255 `i `ui >> & -> 65280 `ui -> _u16TimerValue_ `ui -> 8 `i `uc ]
+"171
+[; ;user_app.c: 171:     TMR0L = (u8)(0x00ff - (u16TimerValue_ & 0x00ff));
+[e = _TMR0L -> - -> -> 255 `i `ui & -> _u16TimerValue_ `ui -> -> 255 `i `ui `uc ]
+"173
+[; ;user_app.c: 173:     PIR3 &= 0x7f;
+[e =& _PIR3 -> -> 127 `i `Vuc ]
+"175
+[; ;user_app.c: 175:     T0CON0 |= 0x80;
+[e =| _T0CON0 -> -> 128 `i `Vuc ]
+"176
+[; ;user_app.c: 176: }
+[e :UE 2277 ]
 }

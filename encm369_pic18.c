@@ -69,8 +69,7 @@ Promises:
 */
 void ClockSetup(void)
 {
- 
-  
+
 } /* end ClockSetup */
 
 
