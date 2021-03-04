@@ -27,7 +27,7 @@ cstackCOMRAM COMRAM 1 514 514 7 1
 dataCOMRAM COMRAM 1 51B 51B 6 1
 bssCOMRAM COMRAM 1 501 501 13 1
 config CONFIG 4 300000 300000 A 1
-$C:\Users\landa\AppData\Local\Temp\sg14.o
+$C:\Users\landa\AppData\Local\Temp\s98s.o
 idloc IDLOC 5 200000 200000 20 1
 init CODE 0 1FFFC 1FFFC 4 1
 reset_vec CODE 0 0 0 4 1
@@ -146,32 +146,32 @@ $dist/default/debug\2021_ENCM369.debug.o
 1FF22 text0 CODE >62:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
 1FF26 text0 CODE >63:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
 1FF32 text0 CODE >64:C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
-1FF3C cinit CODE >5108:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF3C cinit CODE >5110:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF3C cinit CODE >5113:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF3C cinit CODE >5147:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF3E cinit CODE >5148:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF40 cinit CODE >5149:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF42 cinit CODE >5150:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF44 cinit CODE >5151:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF46 cinit CODE >5152:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF48 cinit CODE >5153:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF4C cinit CODE >5154:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF50 cinit CODE >5155:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF50 cinit CODE >5156:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF52 cinit CODE >5157:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF56 cinit CODE >5158:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF58 cinit CODE >5159:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF5A cinit CODE >5160:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF5C cinit CODE >5164:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF60 cinit CODE >5165:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF62 cinit CODE >5166:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF62 cinit CODE >5167:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF64 cinit CODE >5168:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF66 cinit CODE >5169:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF68 cinit CODE >5175:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF68 cinit CODE >5177:C:\Users\landa\AppData\Local\Temp\sg14.s
-1FF6A cinit CODE >5178:C:\Users\landa\AppData\Local\Temp\sg14.s
+1FF3C cinit CODE >5108:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF3C cinit CODE >5110:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF3C cinit CODE >5113:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF3C cinit CODE >5147:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF3E cinit CODE >5148:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF40 cinit CODE >5149:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF42 cinit CODE >5150:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF44 cinit CODE >5151:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF46 cinit CODE >5152:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF48 cinit CODE >5153:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF4C cinit CODE >5154:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF50 cinit CODE >5155:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF50 cinit CODE >5156:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF52 cinit CODE >5157:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF56 cinit CODE >5158:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF58 cinit CODE >5159:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF5A cinit CODE >5160:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF5C cinit CODE >5164:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF60 cinit CODE >5165:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF62 cinit CODE >5166:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF62 cinit CODE >5167:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF64 cinit CODE >5168:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF66 cinit CODE >5169:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF68 cinit CODE >5175:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF68 cinit CODE >5177:C:\Users\landa\AppData\Local\Temp\s98s.s
+1FF6A cinit CODE >5178:C:\Users\landa\AppData\Local\Temp\s98s.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -190,26 +190,26 @@ __Hspace_1 521 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 __Hspace_2 0 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/debug\2021_ENCM369.debug.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\landa\AppData\Local\Temp\sg14.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\landa\AppData\Local\Temp\s98s.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\2021_ENCM369.debug.o
 __end_of_TimeXus 1FECE 0 CODE 0 text3 dist/default/debug\2021_ENCM369.debug.o
 TimeXus@u16TimerValue_ 514 0 COMRAM 1 cstackCOMRAM dist/default/debug\2021_ENCM369.debug.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug\2021_ENCM369.debug.o
 _LATA 4BE 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 _PIR3 4B1 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
-___sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sg14.o
+___sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\s98s.o
 _main 1FF0A 0 CODE 0 text0 dist/default/debug\2021_ENCM369.debug.o
-start 1FFFC 0 CODE 0 init C:\Users\landa\AppData\Local\Temp\sg14.o
+start 1FFFC 0 CODE 0 init C:\Users\landa\AppData\Local\Temp\s98s.o
 __size_of_main 0 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\2021_ENCM369.debug.o
 __size_of_SystemSleep 0 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/debug\2021_ENCM369.debug.o
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\2021_ENCM369.debug.o
-__accesstop 560 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sg14.o
-intlevel0 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sg14.o
-intlevel1 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sg14.o
-intlevel2 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sg14.o
-intlevel3 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\sg14.o
+__accesstop 560 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\s98s.o
+intlevel0 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\s98s.o
+intlevel1 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\s98s.o
+intlevel2 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\s98s.o
+intlevel3 0 0 CODE 0 text C:\Users\landa\AppData\Local\Temp\s98s.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\2021_ENCM369.debug.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\2021_ENCM369.debug.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/debug\2021_ENCM369.debug.o
@@ -219,8 +219,8 @@ UserAppRun@u8LATATemporary 51A 0 COMRAM 1 cstackCOMRAM dist/default/debug\2021_E
 _UserAppRun 1FF6E 0 CODE 0 text1 dist/default/debug\2021_ENCM369.debug.o
 _ANSELA 400 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 _G_u32SystemTime1s 509 0 COMRAM 1 bssCOMRAM dist/default/debug\2021_ENCM369.debug.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sg14.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\sg14.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\s98s.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\landa\AppData\Local\Temp\s98s.o
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\2021_ENCM369.debug.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\2021_ENCM369.debug.o
 UserAppRun@u16PatternIndex 511 0 COMRAM 1 bssCOMRAM dist/default/debug\2021_ENCM369.debug.o
@@ -288,7 +288,7 @@ __Hbank36 0 0 ABS 0 bank36 dist/default/debug\2021_ENCM369.debug.o
 __Hbank37 0 0 ABS 0 bank37 dist/default/debug\2021_ENCM369.debug.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\2021_ENCM369.debug.o
 __Hbigram 0 0 ABS 0 bigram dist/default/debug\2021_ENCM369.debug.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\landa\AppData\Local\Temp\sg14.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\landa\AppData\Local\Temp\s98s.o
 _SystemSleep 1FEB0 0 CODE 0 text4 dist/default/debug\2021_ENCM369.debug.o
 __Hcomram 0 0 ABS 0 comram dist/default/debug\2021_ENCM369.debug.o
 __Hconfig 30000A 0 CONFIG 4 config dist/default/debug\2021_ENCM369.debug.o
@@ -383,8 +383,8 @@ __end_of_SysTickSetup 1FF0A 0 CODE 0 text5 dist/default/debug\2021_ENCM369.debug
 _UserAppInitialize 1FECE 0 CODE 0 text2 dist/default/debug\2021_ENCM369.debug.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/debug\2021_ENCM369.debug.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/debug\2021_ENCM369.debug.o
-stackhi 25FF 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sg14.o
-stacklo 560 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\sg14.o
+stackhi 25FF 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\s98s.o
+stacklo 560 0 ABS 0 - C:\Users\landa\AppData\Local\Temp\s98s.o
 __Lirdata 0 0 CODE 0 irdata dist/default/debug\2021_ENCM369.debug.o
 __Lspace_0 0 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 __Lspace_1 0 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
@@ -408,7 +408,7 @@ __ptext5 1FEE8 0 CODE 0 text5 dist/default/debug\2021_ENCM369.debug.o
 __ptext6 1FEAE 0 CODE 0 text6 dist/default/debug\2021_ENCM369.debug.o
 __ptext7 1FEAC 0 CODE 0 text7 dist/default/debug\2021_ENCM369.debug.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/debug\2021_ENCM369.debug.o
-__ramtop 2600 0 RAM 0 ramtop C:\Users\landa\AppData\Local\Temp\sg14.o
+__ramtop 2600 0 RAM 0 ramtop C:\Users\landa\AppData\Local\Temp\s98s.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/debug\2021_ENCM369.debug.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\2021_ENCM369.debug.o
 _ClockSetup 1FEAC 0 CODE 0 text7 dist/default/debug\2021_ENCM369.debug.o
