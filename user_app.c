@@ -75,7 +75,12 @@ Promises:
 */
 void UserAppInitialize(void)
 {
-
+    TRISA = 0x00; // I/O selection
+    LATA = 0x80; // IO Input/Output
+    ANSELA = 0x00; // Digital/Analog Selector
+    
+    T0CON0 = 0xB0;
+    T0CON1 = 0x54;
 
 } /* end UserAppInitialize() */
 
@@ -98,7 +103,7 @@ void UserAppRun(void)
     {
         PORTA += 1; /* Binary increment counter */
     }
-    else /* Excecutes if counter is greater than maximum value */
+    else /* Executes if counter is greater than maximum value */
     {
         PORTA = 0x80; /* Reset all ports to 0 except pin 7 */
     }
@@ -118,7 +123,31 @@ void UserAppRun(void)
 /*! @privatesection */                                                                                            
 /*--------------------------------------------------------------------------------------------------------------------*/
 
+/*--------------------------------------------------------------------------------------------------------------------
+void TimeXus(INPUT_PARAMETER_)
+Sets Timer0 to count u16Microseconds_
 
+Requires:
+-Timer0 configured such that each timer tick is 1 microsecond
+-INPUT_PARAMETER_ is the value in microseconds to time from 1 to 65535
+
+Promises:
+-Pre-loads TMR0H:L to clock out desired period
+- TMR0IF cleared
+- Timer0 enabled
+ */
+
+void TimeXus(u16 u16TimerValue_)
+{
+    T0CON0 &= 0x7f; //Turns Timer off
+    
+    TMR0H = (u8)(0x00ff - ((0xff00 & u16TimerValue_) >> 8));
+    TMR0L = (u8)(0x00ff - (u16TimerValue_ & 0x00ff));
+    
+    PIR3 &= 0x7f; //Clears TMR0IF   
+            
+    T0CON0 |= 0x80; //Turns timer back on
+}  /* end TimeXus () */
 
 
 
