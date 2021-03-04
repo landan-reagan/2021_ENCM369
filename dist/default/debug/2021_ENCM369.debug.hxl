@@ -6,7 +6,7 @@
   200020h - 2FFFFFh
   30000Ah - 30003Fh
   
- dist/default/production\2021_ENCM369.production.hex ranges:
+ dist/default/debug\2021_ENCM369.debug.hex ranges:
   0h - 3h
   1FEACh - 1FFFFh
   200000h - 20001Fh
@@ -23,7 +23,7 @@
   T = Trailing code
   & = Find & replace opcode
   X = Find & delete opcode
-  1 = dist/default/production\2021_ENCM369.production.hex
+  1 = dist/default/debug\2021_ENCM369.debug.hex
 00000000: 1111------------------------------------------------------------
 0001FE80: --------------------------------------------11111111111111111111
 0001FEC0: 1111111111111111111111111111111111111111111111111111111111111111

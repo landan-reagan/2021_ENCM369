@@ -274,9 +274,9 @@ text4 1FEB0 1FEB1 CODE 1FEB0 0
 text6 1FEAE 1FEAF CODE 1FEAE 0
 text7 1FEAC 1FEAD CODE 1FEAC 0
 %locals
-dist/default/production\2021_ENCM369.production.o
+dist/default/debug\2021_ENCM369.debug.o
 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
-C:\Users\landa\AppData\Local\Temp\s78c.s
+C:\Users\landa\AppData\Local\Temp\sg14.s
 5108 1FF3C 0 CODE 0
 5110 1FF3C 0 CODE 0
 5113 1FF3C 0 CODE 0

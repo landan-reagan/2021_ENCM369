@@ -1,4 +1,4 @@
-# 1 "user_app.c"
+# 1 "main.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,12 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "user_app.c" 2
-# 26 "user_app.c"
+# 1 "main.c" 2
+
+
+
+
+
 # 1 "./configuration.h" 1
 # 30 "./configuration.h"
 #pragma config FEXTOSC = OFF
@@ -27295,7 +27299,7 @@ void TimeXus(u16 u16TimerValue_);
 void UserAppInitialize(void);
 void UserAppRun(void);
 # 106 "./configuration.h" 2
-# 26 "user_app.c" 2
+# 6 "main.c" 2
 
 
 
@@ -27303,71 +27307,42 @@ void UserAppRun(void);
 
 
 
-volatile u8 G_u8UserAppFlags;
 
-
-
-
-extern volatile u32 G_u32SystemTime1ms;
-extern volatile u32 G_u32SystemTime1s;
-extern volatile u32 G_u32SystemFlags;
-# 76 "user_app.c"
-void UserAppInitialize(void)
+volatile u32 G_u32SystemTime1ms = 0;
+volatile u32 G_u32SystemTime1s = 0;
+volatile u32 G_u32SystemFlags = 0;
+# 35 "main.c"
+void main(void)
 {
-    TRISA = 0x00;
-    LATA = 0x80;
-    ANSELA = 0x00;
+  G_u32SystemFlags |= (u32)0x80000000;
 
-    T0CON0 = 0x90;
-    T0CON1 = 0x54;
 
-}
-# 100 "user_app.c"
-void UserAppRun(void)
-{
-    static u32 u32DelayCounter=0;
+  ClockSetup();
+  SysTickSetup();
+  GpioSetup();
 
-    u32DelayCounter++;
 
-    if (u32DelayCounter == 150)
-        {
-        static u16 u16PatternIndex = 0;
 
-        u8 au8Pattern[6] = {0x01,
-                     0x02,
-                     0x04,
-                     0x08,
-                     0x10,
-                     0x20};
 
-        u8 u8LATATemporary = LATA;
+  UserAppInitialize();
 
-        u8LATATemporary &= 0xC0;
 
-        u8LATATemporary |= au8Pattern[u16PatternIndex];
 
-        LATA = u8LATATemporary;
 
-        if (u16PatternIndex < 5)
-        {
-            u16PatternIndex++;
-        }
-        else
-            u16PatternIndex = 0;
+  while(1)
+  {
 
-        u32DelayCounter=0;
-    }
 
-}
-# 157 "user_app.c"
-void TimeXus(u16 u16TimerValue_)
-{
-    T0CON0 &= 0x7f;
 
-    TMR0H = (u8)(0x00ff - ((0xff00 & u16TimerValue_) >> 8));
-    TMR0L = (u8)(0x00ff - (u16TimerValue_ & 0x00ff));
+    UserAppRun();
 
-    PIR3 &= 0x7f;
 
-    T0CON0 |= 0x80;
+
+    (LATA &= 0x7F);
+    SystemSleep();
+    TimeXus(1000);
+    (LATA |= 0x80);
+
+  }
+
 }
