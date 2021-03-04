@@ -103,7 +103,7 @@ void UserAppRun(void)
    
     u32DelayCounter++;
     
-    if (u32DelayCounter == 150) //Only runs every 150 times UserAppRun is called (1ms delay every time, 150ms total)
+    if (u32DelayCounter == 150) // Only runs every 150 times UserAppRun is called (1ms delay every time, 150ms total)
         {
         static u16 u16PatternIndex = 0;
 
@@ -118,9 +118,9 @@ void UserAppRun(void)
 
         u8LATATemporary &= 0xC0; // Mask out 6 LSB's from LATATemporary
 
-        u8LATATemporary |= au8Pattern[u16PatternIndex]; // Update 6 LSB's with a certain value to LATATemp
+        u8LATATemporary |= au8Pattern[u16PatternIndex]; // Update 6 LSB's with a certain value to LATATemporary
 
-        LATA = u8LATATemporary; // Update the value of LATA with the modified value in LATATemp
+        LATA = u8LATATemporary; // Update the value of LATA with the new value in LATATemporary
 
         if (u16PatternIndex < 5)
         {
