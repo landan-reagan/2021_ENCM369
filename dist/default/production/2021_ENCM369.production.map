@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\2021_ENCM369.production.sym \
   --cmf=dist/default/production\2021_ENCM369.production.cmf -z -Q18F27Q43 \
-  -oC:\Users\landa\AppData\Local\Temp\s9m4.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\landa\AppData\Local\Temp\s334.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/2021_ENCM369.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0560h-025FFh -pstack=STACK \
   -ACODE=00h-01FFFFh -ACONST=00h-01FFFFh -ASMALLCONST=02600h-026FFhx474 \
@@ -31,7 +31,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\landa\AppData\Local\Temp\s9m4.o \
+  C:\Users\landa\AppData\Local\Temp\s334.o \
   dist/default/production\2021_ENCM369.production.o 
 
 Object code version is 3.11
@@ -41,7 +41,7 @@ Machine type is 18F27Q43
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\landa\AppData\Local\Temp\s9m4.o
+C:\Users\landa\AppData\Local\Temp\s334.o
                 idloc                            200000   200000       20        0       5
                 config                           300000   300000        A        0       4
                 init                              1FFFC    1FFFC        4     FFFE       0

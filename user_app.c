@@ -99,20 +99,14 @@ Promises:
 */
 void UserAppRun(void)
 {
-    static u32 u32DelayCounter=0;
-   
+    static u32 u32DelayCounter = 0;
     u32DelayCounter++;
     
-    if (u32DelayCounter == 150) // Only runs every 150 times UserAppRun is called (1ms delay every time, 150ms total)
+    if (u32DelayCounter == 150) // Runs every 150 times UserAppRun is called (1ms delay every time, 150ms total)
         {
         static u16 u16PatternIndex = 0;
-
-        u8 au8Pattern[6] = {0x01,
-                     0x02,
-                     0x04,
-                     0x08,
-                     0x10,
-                     0x20};
+        u32DelayCounter = 0;
+        u8 au8Pattern[6] = {0x01, 0x02, 0x04, 0x08, 0x10, 0x20}; // Various LED patterns to cycle through
 
         u8 u8LATATemporary = LATA; // Store value of LATA into temporary 8 bit variable
 
@@ -128,10 +122,7 @@ void UserAppRun(void)
         }
         else
             u16PatternIndex = 0;
-        
-        u32DelayCounter=0;
     }
-
 } /* end UserAppRun */
 
 
@@ -156,14 +147,14 @@ Promises:
 
 void TimeXus(u16 u16TimerValue_)
 {
-    T0CON0 &= 0x7f; //Turns Timer off
+    T0CON0 &= 0x7f; // Turns Timer off during config
     
+    /* Preload TMR0H and TMR0L based on u16TimerValue_*/
     TMR0H = (u8)(0x00ff - ((0xff00 & u16TimerValue_) >> 8));
     TMR0L = (u8)(0x00ff - (u16TimerValue_ & 0x00ff));
-    
     PIR3 &= 0x7f; //Clears TMR0IF   
             
-    T0CON0 |= 0x80; //Turns timer back on
+    T0CON0 |= 0x80; // Turns timer on
 }  /* end TimeXus () */
 
 
