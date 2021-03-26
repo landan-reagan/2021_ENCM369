@@ -55,15 +55,20 @@ void main(void)
        
     /* Applications */
     UserAppRun();
-   
-     
+# if 1
     /* System sleep */
     HEARTBEAT_OFF();
     SystemSleep();
-    TimeXus(1000);
-    while ((PIR3 & 0x80) != 0x80) {}
+    TimeXus(11.2);
+    while ((PIR3 & 0x80) != 0x80){}
     HEARTBEAT_ON();
-    
+# endif
+
+# if 0
+    TimeXus(2);
+    while ( PIR3bits.TMR0IF == 0);
+    DAC1DATL += 4;
+# endif
   } /* end while(1) main super loop */
   
 } /* end main() */

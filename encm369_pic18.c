@@ -69,7 +69,8 @@ Promises:
 */
 void ClockSetup(void)
 {
-
+ 
+  
 } /* end ClockSetup */
 
 
@@ -87,6 +88,12 @@ Promises:
 */
 void GpioSetup(void)
 {
+    // Set PORT, LATA, ANSELA and TRISA to 0x00 for digital output.
+    PORTA = 0x00;
+    LATA = 0x00;
+    ANSELA = 0x00;
+    TRISA = 0x00;
+    
   
 } /* end GpioSetup() */
 
