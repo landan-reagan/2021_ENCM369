@@ -22,6 +22,7 @@ PROTECTED FUNCTIONS
 ***********************************************************************************************************************/
 
 #include "configuration.h"
+#include "pic18f27q43.h"
 
 /***********************************************************************************************************************
 Global variable definitions with scope across entire project.
@@ -36,7 +37,7 @@ All Global variable names shall start with "G_xxBsp"
 /* Existing variables (defined in other files -- should all contain the "extern" keyword) */
 extern volatile u32 G_u32SystemTime1ms;        /*!< @brief From main.c */
 extern volatile u32 G_u32SystemTime1s;         /*!< @brief From main.c */
-extern volatile u32 G_u32SystemFlags;          /*!< @brief From main.c */
+extern volatile u8  G_u8SystemFlags;           /*!< @brief From main.c */
 
 /***********************************************************************************************************************
 Global variable definitions with scope limited to this local application.
@@ -83,18 +84,19 @@ Requires:
 - All configurations must match connected hardware.
 
 Promises:
-- Output pin for PA31_HEARTBEAT is configured
+- PORTA setup for LED output
 
 */
 void GpioSetup(void)
 {
-    // Set PORT, LATA, ANSELA and TRISA to 0x00 for digital output.
-    PORTA = 0x00;
-    LATA = 0x00;
-    ANSELA = 0x00;
-    TRISA = 0x00;
-    
-  
+  /* Setup PORTA for all digital output */
+  ANSELA = 0x00;
+  TRISA  = 0x00;
+   
+  /* Configure DAC1 for Vdd and Vss references, on, and RA2 output. */
+  DAC1CON  = 0xA0;
+  DAC1DATL = 0;
+ 
 } /* end GpioSetup() */
 
 
@@ -107,13 +109,26 @@ Requires:
 - NVIC is setup and SysTick handler is installed
 
 Promises:
-- Both global system timers are reset and the SysTick core timer is configured for 1ms intervals
+- Both global system timers are reset Timer0 is configured for 1ms intervals
 
 */
 void SysTickSetup(void)
 {
   G_u32SystemTime1ms = 0;      
   G_u32SystemTime1s  = 0;   
+  
+  /* Setup Timer2 for 1ms period 
+   * Input clock: Fosc / 4 = 16MHz
+   * Maximum prescaler 128 > 125kHz > 8us period
+   * 125 x 8us = 1ms so use Timer2 match to 124
+   * No postscaler requried */
+  
+  T2PR = 125;             // Match register for 1ms period
+  T2CLKCON = 0x01;        // b'00000001' Fosc/4 input
+  PIR3bits.TMR2IF = 0;    // Make sure interrupt flag is clear to start
+  T2CON = 0xF0;           // b'11110000' Timer on, 1:128 prescale, 1:1 postscaler
+  
+  PIE3bits.TMR2IE = 1;    // Enable Timer2 interrupt: Systick is now running
   
 } /* end SysTickSetup() */
 
@@ -134,6 +149,8 @@ Promises:
 */
 void SystemSleep(void)
 {    
+  G_u8SystemFlags |= _SYSTEM_SLEEPING;
+  while(G_u8SystemFlags & _SYSTEM_SLEEPING);
   
 } /* end SystemSleep(void) */
 

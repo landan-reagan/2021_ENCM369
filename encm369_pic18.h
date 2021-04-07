@@ -15,7 +15,6 @@ Bookmarks:
 !!!!! GPIO pin names
 @@@@@ Watchdog, Power Control, Clock, and Systick setup values
 ##### GPIO initial setup values
-$$$$$ PWM setup values
 
 ***********************************************************************************************************************/
 /*! @endcond */
@@ -41,9 +40,8 @@ Type Definitions
 /***********************************************************************************************************************
 * Macros
 ***********************************************************************************************************************/
-#define HEARTBEAT_ON()       (LATA |= 0x80)   /*!< @brief Turns on Heartbeat LED */
-#define HEARTBEAT_OFF()      (LATA &= 0x7F)   /*!< @brief Turns off Heartbeat LED */
-
+#define HEARTBEAT_ON()          (LATA |= 0x80)  /*!< @brief Turns on Heartbeat LED */
+#define HEARTBEAT_OFF()         (LATA &= 0x7F)  /*!< @brief Turns off Heartbeat LED */
 
 /***********************************************************************************************************************
 &&&&& Function Declarations
@@ -128,7 +126,7 @@ void SystemSleep(void);
 
 
 
-#endif /* __EIEF1 */
+#endif /* __ENCM369_H */
 
 
 

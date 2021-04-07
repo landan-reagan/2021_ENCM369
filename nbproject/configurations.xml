@@ -9,6 +9,10 @@
       <itemPath>main.h</itemPath>
       <itemPath>typedefs.h</itemPath>
       <itemPath>user_app.h</itemPath>
+      <itemPath>pic18f27q43.h</itemPath>
+      <itemPath>xc.h</itemPath>
+      <itemPath>interrupts.h</itemPath>
+      <itemPath>music.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -20,6 +24,7 @@
       <itemPath>encm369_pic18.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>user_app.c</itemPath>
+      <itemPath>interrupts.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -44,7 +49,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.8.154"/>
+        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.9.175"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -153,14 +158,6 @@
         <property key="program-the-device-with-default-config-words" value="true"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
-      <Simulator>
-        <property key="W0102_SIM_PERIPH_MISSING" value="report"/>
-        <property key="W0106_SIM_PERIPH_PARTIAL_SUPPORT" value="report"/>
-        <property key="W0107_SIM_NOT_SUPPORTED" value="report"/>
-        <property key="W0237_ADC_UNKNOWN_DATASHEET" value="report"/>
-        <property key="W9602_COMP_DAC_SOURCE_UNAVAILABLE" value="report"/>
-        <property key="periphADC1.minTacq" value="4"/>
-      </Simulator>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
       </XC8-CO>
@@ -190,7 +187,8 @@
         <property key="ToolFirmwareToolPack"
                   value="Press to select which tool pack to use"/>
         <property key="communication.activationmode" value="nohv"/>
-        <property key="communication.interface" value=""/>
+        <property key="communication.interface"
+                  value="${communication.interface.default}"/>
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="${communication.speed.default}"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
@@ -209,8 +207,10 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="memories.rww" value="true"/>
-        <property key="poweroptions.powerenable" value="false"/>
-        <property key="programmerToGoImageName" value="default_ptg"/>
+        <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="D:/_git/UofCencm369/2021_ENCM369/debug/default/PIC_Activity3_ptg"/>
+        <property key="programmerToGoImageName" value="PIC_Activity3_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.ledbrightness" value="5"/>

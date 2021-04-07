@@ -11,15 +11,12 @@
 * Constant Definitions
 ***********************************************************************************************************************/
 /* G_u32ApplicationFlags */
-
 /* end G_u32ApplicationFlags */
 
-
-
-/* G_u32SystemFlags */
-#define _SYSTEM_SLEEPING                (u32)0x40000000   /*!< G_u32SystemFlags set into sleep mode to go back to sleep if woken before 1ms period */
-#define _SYSTEM_INITIALIZING            (u32)0x80000000   /*!< G_u32SystemFlags set when system is in initialization phase */
-/* end G_u32SystemFlags */
+/* G_u8SystemFlags */
+#define _SYSTEM_SLEEPING                (u8)0x40   /*!< G_u8SystemFlags set into sleep mode to go back to sleep if woken before 1ms period */
+#define _SYSTEM_INITIALIZING            (u8)0x80   /*!< G_u8SystemFlags set when system is in initialization phase */
+/* end G_u8SystemFlags */
 
 
 
