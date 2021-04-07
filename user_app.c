@@ -219,7 +219,7 @@ void UserAppInitialize(void)
     
     // Test call to set frequency
  
-    
+    InterruptTimerXus(28,1);
 } /* end UserAppInitialize() */
 
   
@@ -237,7 +237,30 @@ Promises:
 */
 void UserAppRun(void)
 {
-
+    static u8 u8Index = 0;
+    
+    u16 au16Notes[] =
+    {C4, C4, C4, C4, G4, G4, A4, A4, G4, F4, F4, E4, E4, D4, D4, C4,
+     G4, G4, F4, F4, E4, E4, D4, G4, G4, F4, F4, E4, E4, D4,
+     NN, NN, NN, NN
+    };
+    
+    u16 au16Length[] =
+    {N4, N4, N4, N4, N4, N4, N2, N4, N4, N4, N4, N4, N4, N2,
+     N4, N4, N4, N4, N4, N4, N2, N4, N4, N4, N4, N4, N4, N2,
+     N4, N4, N4, N4
+    };
+    
+    InterruptTimerXus(au16Notes[u8Index],1);
+    
+    TimeXus(100000000000);
+    
+    
+    u8Index ++;
+    if (u8Index == 0xff)
+    {
+        u8Index = 0;
+    }
   
 } /* end UserAppRun() */
 

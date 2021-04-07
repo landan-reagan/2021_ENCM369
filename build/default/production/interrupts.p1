@@ -41,6 +41,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "43 interrupts.c
 [; ;interrupts.c: 43: extern volatile u8 G_u8UserAppTimePeriodLo;
 [v _G_u8UserAppTimePeriodLo `Vuc ~T0 @X0 0 e ]
+"3158 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic18f27q43.h
+[; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic18f27q43.h: 3158: extern volatile unsigned char DAC1DATL __attribute__((address(0x07D)));
+[v _DAC1DATL `Vuc ~T0 @X0 0 e@125 ]
+"45 interrupts.c
+[; ;interrupts.c: 45: extern u8 G_au8UserAppsinTable[];
+[v _G_au8UserAppsinTable `uc ~T0 @X0 -> 0 `x e ]
 "44876 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic18f27q43.h
 [; ;C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic18f27q43.h: 44876:     struct {
 [s S2125 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -2697,48 +2703,54 @@ Version 4.0 HI-TECH Software Intermediate Code
 "118
 [; ;interrupts.c: 118:   TMR1L = G_u8UserAppTimePeriodLo;
 [e = _TMR1L _G_u8UserAppTimePeriodLo ]
-"133
-[; ;interrupts.c: 133:   PIR3bits.TMR1IF = 0;
+"126
+[; ;interrupts.c: 126:   DAC1DATL = G_au8UserAppsinTable[u8Index];
+[e = _DAC1DATL *U + &U _G_au8UserAppsinTable * -> F15945 `ux -> -> # *U &U _G_au8UserAppsinTable `ui `ux ]
+"127
+[; ;interrupts.c: 127:   u8Index += 4;
+[e =+ F15945 -> -> 4 `i `uc ]
+"134
+[; ;interrupts.c: 134:   PIR3bits.TMR1IF = 0;
 [e = . . _PIR3bits 0 4 -> -> 0 `i `uc ]
-"136
-[; ;interrupts.c: 136:   if( !(G_u8UserAppFlags & (u8)0x01) )
-[e $ ! ! != & -> _G_u8UserAppFlags `i -> -> -> 1 `i `uc `i -> 0 `i 2276  ]
 "137
-[; ;interrupts.c: 137:   {
-{
+[; ;interrupts.c: 137:   if( !(G_u8UserAppFlags & (u8)0x01) )
+[e $ ! ! != & -> _G_u8UserAppFlags `i -> -> -> 1 `i `uc `i -> 0 `i 2276  ]
 "138
-[; ;interrupts.c: 138:     PIE3bits.TMR1IE = 0;
-[e = . . _PIE3bits 0 4 -> -> 0 `i `uc ]
+[; ;interrupts.c: 138:   {
+{
 "139
-[; ;interrupts.c: 139:     T1CONbits.ON = 0;
-[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
+[; ;interrupts.c: 139:     PIE3bits.TMR1IE = 0;
+[e = . . _PIE3bits 0 4 -> -> 0 `i `uc ]
 "140
-[; ;interrupts.c: 140:   }
+[; ;interrupts.c: 140:     T1CONbits.ON = 0;
+[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
+"141
+[; ;interrupts.c: 141:   }
 }
 [e :U 2276 ]
-"142
-[; ;interrupts.c: 142: }
+"143
+[; ;interrupts.c: 143: }
 [e :UE 2275 ]
 }
 [v $root$_TMR2_ISR `(v ~T0 @X0 0 e ]
-"146
-[; ;interrupts.c: 146: void __attribute__((picinterrupt(("irq(27), high_priority")))) TMR2_ISR(void)
-[v _TMR2_ISR `(v ~T4 @X0 1 ef ]
 "147
-[; ;interrupts.c: 147: {
+[; ;interrupts.c: 147: void __attribute__((picinterrupt(("irq(27), high_priority")))) TMR2_ISR(void)
+[v _TMR2_ISR `(v ~T4 @X0 1 ef ]
+"148
+[; ;interrupts.c: 148: {
 {
 [e :U _TMR2_ISR ]
 [f ]
-"149
-[; ;interrupts.c: 149:   PIR3bits.TMR2IF = 0;
-[e = . . _PIR3bits 0 3 -> -> 0 `i `uc ]
 "150
-[; ;interrupts.c: 150:   G_u8SystemFlags &= ~(u8)0x40;
+[; ;interrupts.c: 150:   PIR3bits.TMR2IF = 0;
+[e = . . _PIR3bits 0 3 -> -> 0 `i `uc ]
+"151
+[; ;interrupts.c: 151:   G_u8SystemFlags &= ~(u8)0x40;
 [e =& _G_u8SystemFlags -> ~ -> -> -> 64 `i `uc `i `Vuc ]
-"153
-[; ;interrupts.c: 153:   G_u32SystemTime1ms++;
+"154
+[; ;interrupts.c: 154:   G_u32SystemTime1ms++;
 [e ++ _G_u32SystemTime1ms -> -> 1 `i `Vul ]
-"162
-[; ;interrupts.c: 162: }
+"163
+[; ;interrupts.c: 163: }
 [e :UE 2277 ]
 }

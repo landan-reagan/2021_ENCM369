@@ -27407,7 +27407,21 @@ void __attribute__((picinterrupt(("irq(28), high_priority")))) TMR1_ISR(void)
 
   TMR1H = G_u8UserAppTimePeriodHi;
   TMR1L = G_u8UserAppTimePeriodLo;
-# 133 "interrupts.c"
+
+
+
+
+
+
+
+  DAC1DATL = G_au8UserAppsinTable[u8Index];
+  u8Index += 4;
+
+
+
+
+
+
   PIR3bits.TMR1IF = 0;
 
 
@@ -27429,5 +27443,5 @@ void __attribute__((picinterrupt(("irq(27), high_priority")))) TMR2_ISR(void)
 
 
   G_u32SystemTime1ms++;
-# 162 "interrupts.c"
+# 163 "interrupts.c"
 }

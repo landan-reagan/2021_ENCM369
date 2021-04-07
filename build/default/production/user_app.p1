@@ -3031,6 +3031,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "218
 [; ;user_app.c: 218:     T1CON = 0x31;
 [e = _T1CON -> -> 49 `i `uc ]
+"222
+[; ;user_app.c: 222:     InterruptTimerXus(28,1);
+[e ( _InterruptTimerXus (2 , -> -> 28 `i `us -> -> 1 `i `a ]
 "223
 [; ;user_app.c: 223: }
 [e :UE 2276 ]
@@ -3043,7 +3046,119 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _UserAppRun ]
 [f ]
+"240
+[; ;user_app.c: 240:     static u8 u8Index = 0;
+[v F15949 `uc ~T0 @X0 1 s u8Index ]
+[i F15949
+-> -> 0 `i `uc
+]
+[v F15950 `us ~T0 @X0 -> 34 `i s ]
+[i F15950
+:U ..
 "242
-[; ;user_app.c: 242: }
+[; ;user_app.c: 242:     u16 au16Notes[] =
+-> -> 60 `i `us
+-> -> 60 `i `us
+-> -> 60 `i `us
+-> -> 60 `i `us
+-> -> 40 `i `us
+-> -> 40 `i `us
+-> -> 36 `i `us
+-> -> 36 `i `us
+-> -> 40 `i `us
+-> -> 45 `i `us
+-> -> 45 `i `us
+-> -> 47 `i `us
+-> -> 47 `i `us
+-> -> 53 `i `us
+-> -> 53 `i `us
+-> -> 60 `i `us
+-> -> 40 `i `us
+-> -> 40 `i `us
+-> -> 45 `i `us
+-> -> 45 `i `us
+-> -> 47 `i `us
+-> -> 47 `i `us
+-> -> 53 `i `us
+-> -> 40 `i `us
+-> -> 40 `i `us
+-> -> 45 `i `us
+-> -> 45 `i `us
+-> -> 47 `i `us
+-> -> 47 `i `us
+-> -> 53 `i `us
+-> -> 0 `i `us
+-> -> 0 `i `us
+-> -> 0 `i `us
+-> -> 0 `i `us
+..
+]
+[v _au16Notes `us ~T0 @X0 -> 34 `i a ]
+[e = _au16Notes F15950 ]
+[v F15952 `us ~T0 @X0 -> 32 `i s ]
+[i F15952
+:U ..
+"248
+[; ;user_app.c: 248:     u16 au16Length[] =
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+..
+]
+[v _au16Length `us ~T0 @X0 -> 32 `i a ]
+[e = _au16Length F15952 ]
+"254
+[; ;user_app.c: 254:     InterruptTimerXus(au16Notes[u8Index],1);
+[e ( _InterruptTimerXus (2 , *U + &U _au16Notes * -> F15949 `ux -> -> # *U &U _au16Notes `ui `ux -> -> 1 `i `a ]
+"256
+[; ;user_app.c: 256:     TimeXus(100000000000);
+[e ( _TimeXus (1 -> -> 100000000000 `o `us ]
+"259
+[; ;user_app.c: 259:     u8Index ++;
+[e ++ F15949 -> -> 1 `i `uc ]
+"260
+[; ;user_app.c: 260:     if (u8Index == 0xff)
+[e $ ! == -> F15949 `i -> 255 `i 2278  ]
+"261
+[; ;user_app.c: 261:     {
+{
+"262
+[; ;user_app.c: 262:         u8Index = 0;
+[e = F15949 -> -> 0 `i `uc ]
+"263
+[; ;user_app.c: 263:     }
+}
+[e :U 2278 ]
+"265
+[; ;user_app.c: 265: }
 [e :UE 2277 ]
 }
