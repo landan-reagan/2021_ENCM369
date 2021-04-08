@@ -47,9 +47,7 @@
 [v _TMR2_ISR TMR2_ISR `IIH(v  1 e 1 0 ]
 "34 C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\main.c
 [v _main main `(v  1 e 1 0 ]
-"94 C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
-[v _TimeXus TimeXus `(v  1 e 1 0 ]
-"147
+"147 C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
 [v _InterruptTimerXus InterruptTimerXus `(v  1 e 1 0 ]
 "204
 [v _UserAppInitialize UserAppInitialize `(v  1 e 1 0 ]
@@ -214,25 +212,18 @@
 "238 C:\Users\landa\OneDrive\Documents\GitHub\2021_ENCM369\user_app.c
 [v _UserAppRun UserAppRun `(v  1 e 1 0 ]
 {
-"242
-[v UserAppRun@au16Notes au16Notes `[34]us  1 a 68 64 ]
 "248
-[v UserAppRun@au16Length au16Length `[32]us  1 a 64 0 ]
+[v UserAppRun@au16Length au16Length `[29]us  1 a 58 58 ]
+"243
+[v UserAppRun@au16Notes au16Notes `[29]us  1 a 58 0 ]
 "240
 [v UserAppRun@u8Index u8Index `uc  1 s 1 u8Index ]
-[v UserAppRun@F15950 F15950 `[34]us  1 s 68 F15950 ]
-"242
-[v UserAppRun@F15952 F15952 `[32]us  1 s 64 F15952 ]
+"241
+[v UserAppRun@u16Counter u16Counter `us  1 s 2 u16Counter ]
+[v UserAppRun@F15951 F15951 `[29]us  1 s 58 F15951 ]
+"243
+[v UserAppRun@F15953 F15953 `[29]us  1 s 58 F15953 ]
 "265
-} 0
-"94
-[v _TimeXus TimeXus `(v  1 e 1 0 ]
-{
-"96
-[v TimeXus@u16Temp u16Temp `us  1 a 2 3 ]
-"94
-[v TimeXus@u16TimeXus_ u16TimeXus_ `us  1 p 2 1 ]
-"119
 } 0
 "204
 [v _UserAppInitialize UserAppInitialize `(v  1 e 1 0 ]

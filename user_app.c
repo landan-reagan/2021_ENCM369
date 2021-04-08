@@ -237,31 +237,31 @@ Promises:
 */
 void UserAppRun(void)
 {
-    static u8 u8Index = 0;
+    static u8  u8Index = 0;                 // Array index
+    static u16 u16Counter = 0x0000;         // Timing counter
     
-    u16 au16Notes[] =
-    {C4, C4, C4, C4, G4, G4, A4, A4, G4, F4, F4, E4, E4, D4, D4, C4,
-     G4, G4, F4, F4, E4, E4, D4, G4, G4, F4, F4, E4, E4, D4,
-     NN, NN, NN, NN
-    };
+    u16 au16Notes[] = 
+                      {NN, C4, NN, C4, NN, G4, NN, G4, NN, A4, 
+                       NN, A4, NN, G4, NN, F4, NN, F4, NN, E4, 
+                       NN, E4, NN, D4, NN, D4, NN, C4, NN};
     
-    u16 au16Length[] =
-    {N4, N4, N4, N4, N4, N4, N2, N4, N4, N4, N4, N4, N4, N2,
-     N4, N4, N4, N4, N4, N4, N2, N4, N4, N4, N4, N4, N4, N2,
-     N4, N4, N4, N4
-    };
+    u16 au16Length[] = 
+                      {RT, N4, RT, N4, RT, N4, RT, N4, RT, N4, 
+                       RT, N4, RT, N2, RT, N4, RT, N4, RT, N4, 
+                       RT, N4, RT, N4, RT, N4, RT, N2, 1000};
     
-    InterruptTimerXus(au16Notes[u8Index],1);
-    
-    TimeXus(100000000000);
-    
-    
-    u8Index ++;
-    if (u8Index == 0xff)
+    if (u16Counter == au16Length[u8Index])  // Check if counter is equal to delay time for each note
     {
-        u8Index = 0;
+        u16Counter = 0x0000;                // If true, reset counter
+        if (u8Index == 29)                  // Reset index once max value is reached
+        {
+            u8Index = 0;
+        }
+        u8Index++;                          // Increment index to move on to next note
+        InterruptTimerXus(au16Notes[u8Index],true);
     }
-  
+    u16Counter++;  
+
 } /* end UserAppRun() */
 
 

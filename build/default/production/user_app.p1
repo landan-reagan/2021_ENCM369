@@ -3052,112 +3052,123 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i F15949
 -> -> 0 `i `uc
 ]
-[v F15950 `us ~T0 @X0 -> 34 `i s ]
+"241
+[; ;user_app.c: 241:     static u16 u16Counter = 0x0000;
+[v F15950 `us ~T0 @X0 1 s u16Counter ]
 [i F15950
+-> -> 0 `i `us
+]
+[v F15951 `us ~T0 @X0 -> 29 `i s ]
+[i F15951
 :U ..
-"242
-[; ;user_app.c: 242:     u16 au16Notes[] =
+"243
+[; ;user_app.c: 243:     u16 au16Notes[] =
+-> -> 0 `i `us
 -> -> 60 `i `us
+-> -> 0 `i `us
 -> -> 60 `i `us
--> -> 60 `i `us
--> -> 60 `i `us
+-> -> 0 `i `us
 -> -> 40 `i `us
+-> -> 0 `i `us
 -> -> 40 `i `us
+-> -> 0 `i `us
 -> -> 36 `i `us
+-> -> 0 `i `us
 -> -> 36 `i `us
+-> -> 0 `i `us
 -> -> 40 `i `us
+-> -> 0 `i `us
 -> -> 45 `i `us
+-> -> 0 `i `us
 -> -> 45 `i `us
+-> -> 0 `i `us
 -> -> 47 `i `us
+-> -> 0 `i `us
 -> -> 47 `i `us
+-> -> 0 `i `us
 -> -> 53 `i `us
+-> -> 0 `i `us
 -> -> 53 `i `us
+-> -> 0 `i `us
 -> -> 60 `i `us
--> -> 40 `i `us
--> -> 40 `i `us
--> -> 45 `i `us
--> -> 45 `i `us
--> -> 47 `i `us
--> -> 47 `i `us
--> -> 53 `i `us
--> -> 40 `i `us
--> -> 40 `i `us
--> -> 45 `i `us
--> -> 45 `i `us
--> -> 47 `i `us
--> -> 47 `i `us
--> -> 53 `i `us
--> -> 0 `i `us
--> -> 0 `i `us
--> -> 0 `i `us
 -> -> 0 `i `us
 ..
 ]
-[v _au16Notes `us ~T0 @X0 -> 34 `i a ]
-[e = _au16Notes F15950 ]
-[v F15952 `us ~T0 @X0 -> 32 `i s ]
-[i F15952
+[v _au16Notes `us ~T0 @X0 -> 29 `i a ]
+[e = _au16Notes F15951 ]
+[v F15953 `us ~T0 @X0 -> 29 `i s ]
+[i F15953
 :U ..
 "248
 [; ;user_app.c: 248:     u16 au16Length[] =
+-> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
+-> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 2 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
--> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
+-> -> 1000 `i `us
 ..
 ]
-[v _au16Length `us ~T0 @X0 -> 32 `i a ]
-[e = _au16Length F15952 ]
+[v _au16Length `us ~T0 @X0 -> 29 `i a ]
+[e = _au16Length F15953 ]
+"253
+[; ;user_app.c: 253:     if (u16Counter == au16Length[u8Index])
+[e $ ! == -> F15950 `ui -> *U + &U _au16Length * -> F15949 `ux -> -> # *U &U _au16Length `ui `ux `ui 2278  ]
 "254
-[; ;user_app.c: 254:     InterruptTimerXus(au16Notes[u8Index],1);
-[e ( _InterruptTimerXus (2 , *U + &U _au16Notes * -> F15949 `ux -> -> # *U &U _au16Notes `ui `ux -> -> 1 `i `a ]
-"256
-[; ;user_app.c: 256:     TimeXus(100000000000);
-[e ( _TimeXus (1 -> -> 100000000000 `o `us ]
-"259
-[; ;user_app.c: 259:     u8Index ++;
-[e ++ F15949 -> -> 1 `i `uc ]
-"260
-[; ;user_app.c: 260:     if (u8Index == 0xff)
-[e $ ! == -> F15949 `i -> 255 `i 2278  ]
-"261
-[; ;user_app.c: 261:     {
+[; ;user_app.c: 254:     {
 {
-"262
-[; ;user_app.c: 262:         u8Index = 0;
+"255
+[; ;user_app.c: 255:         u16Counter = 0x0000;
+[e = F15950 -> -> 0 `i `us ]
+"256
+[; ;user_app.c: 256:         if (u8Index == 29)
+[e $ ! == -> F15949 `i -> 29 `i 2279  ]
+"257
+[; ;user_app.c: 257:         {
+{
+"258
+[; ;user_app.c: 258:             u8Index = 0;
 [e = F15949 -> -> 0 `i `uc ]
-"263
-[; ;user_app.c: 263:     }
+"259
+[; ;user_app.c: 259:         }
+}
+[e :U 2279 ]
+"260
+[; ;user_app.c: 260:         u8Index++;
+[e ++ F15949 -> -> 1 `i `uc ]
+"261
+[; ;user_app.c: 261:         InterruptTimerXus(au16Notes[u8Index],1);
+[e ( _InterruptTimerXus (2 , *U + &U _au16Notes * -> F15949 `ux -> -> # *U &U _au16Notes `ui `ux -> -> 1 `i `a ]
+"262
+[; ;user_app.c: 262:     }
 }
 [e :U 2278 ]
+"263
+[; ;user_app.c: 263:     u16Counter++;
+[e ++ F15950 -> -> 1 `i `us ]
 "265
 [; ;user_app.c: 265: }
 [e :UE 2277 ]
